@@ -1,0 +1,125 @@
+ {{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
+{{- define "content" -}}
+{{- $jqueryjs := resources.Get "js/zdycj/jquery.min.js" -}}
+{{- $fontsjs := resources.Get "js/zdycj/fonts.js" -}}
+<script type="text/javascript" src="{{ $jqueryjs.RelPermalink }}"></script>
+<script type="text/javascript" src="{{ $fontsjs.RelPermalink }}"></script>
+<div class="page single alllist_conbox navssingle_w">
+	{{ .Scratch.Set "sidebartype" "Navigation" }}
+	<!-- ad -->
+	{{ partial "main/ad" . -}}
+	<!-- 小导航 -->
+	{{ partial "main/smheadnav" . -}}
+	<div class="conbox" id="alllist_con">
+		<!-- 侧边栏 -->
+		{{ partial "main/sidebar" . -}}
+		<!-- 内容 -->
+		<div class="navssinglebox">
+			{{- $params := .Scratch.Get "params" -}}
+			<div class="topbox">
+			{{- /* Featured image */ -}}
+			{{- $image := $params.featuredimage -}}
+			{{- $width := "auto" -}}
+			{{- $height := "auto" -}}
+			{{- with .Resources.GetMatch (printf "**%s" $params.featuredimage) -}}
+			    {{- $image = .RelPermalink -}}
+			    {{- $width = .Width -}}
+			    {{- $height = .Height -}}
+			{{- end -}}
+			{{- with .Resources.GetMatch "featured-image" -}}
+			    {{- $image = .RelPermalink -}}
+			    {{- $width = .Width -}}
+			    {{- $height = .Height -}}
+			{{- end -}}
+			{{- with $image -}}
+				<div class="featured-image">
+					{{- dict "Src" . "Title" $.Description "Resources" $.Resources "Width" $width "Height" $height | partial "plugin/image.html" -}}
+				</div>
+			{{- end -}}
+				<div class="conbox">
+					<h1 class="single-title animate__animated animate__flipInX">{{ .Title }}</h1>
+					<p class="single-description">{{ .Description }}</p>
+				</div>
+				<div class="rightbox">
+					<!-- <p class="num">123123</p>
+					<p class="text1">{{ T `navtext1`}}</p> -->
+					<a target="_blank" class="linkbtn" href="{{ $params.link }}">{{ T `navtext2`}}</a>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			
+			{{- /* Series list */ -}}
+			{{- if $params.series | and $params.seriesNavigation -}}
+			        {{- range $key, $value := .Site.Taxonomies.series -}}
+			            {{- range $params.series -}}
+			                {{- if . | urlize | eq ($key | urlize) -}}
+			                    {{- $term := $.Site.GetPage "series" $key -}}
+			                    <div class="details series-nav open">
+			                        <div class="details-summary series-title">
+			                            <span>{{ T "series" }} - {{ $term.Title }}</span>
+			                            <span><i class="details-icon fas fa-angle-right"></i></span>
+			                        </div>
+			                        <div class="details-content series-content">
+			                            <nav>
+			                                <ul>
+			                                    {{- range $value.Pages -}}
+			                                        {{- if .LinkTitle | eq $.Title -}}
+			                                            <li><span class="active">{{ .LinkTitle }}</span></li>
+			                                        {{- else }}
+			                                            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+			                                        {{- end }}
+			                                    {{- end -}}
+			                                </ul>
+			                            </nav>
+			                        </div>
+			                    </div>
+			                {{- end -}}
+			            {{- end -}}
+			        {{- end -}}
+			{{- end -}}
+			
+			{{- /* Content */ -}}
+			<div class="content" id="content">
+			    {{- /* Outdated Article Reminder */ -}}
+			    {{- partial "single/outdatedArticleReminder.html" . -}}
+			    {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+			</div>
+			{{/* Sponsor */}}
+			{{- partial "single/sponsor.html" . -}}
+			   
+			   
+			{{- /* Footer */ -}}
+			
+			{{- partial "single/footer.html" . -}}
+			{{- .Scratch.Set "comment" $params.comment -}}
+			{{- if eq .Params.comment true -}}
+			    {{- .Scratch.Set "comment" .Site.Params.comment -}}
+			{{- else if eq .Params.comment false -}}
+			    {{- .Scratch.Set "comment" dict -}}
+			{{- end -}}
+			{{- /* Comment */ -}}
+			{{- partial "comment.html" . -}}
+		</div>
+		<div class="articlecataloguebox articlecatalogueboxad" ><!-- id="toc-static" -->
+			<div class="">
+				
+			</div>
+			<!-- {{ partial "main/ad3" . -}} -->
+		</div>
+			
+	</div>
+</div>
+<script type="text/javascript">
+	$(".desktop .menu-item").eq(2).addClass("active");
+</script>
+{{- end -}}
+
+
+
+  
+	
+

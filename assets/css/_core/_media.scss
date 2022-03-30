@@ -11,7 +11,7 @@ width: 1290px;
 	  width: 100%;
 	  box-sizing: border-box;
 	  -webkit-box-sizing: border-box;
-	  padding: 0 1rem;
+	  padding: 0 2rem;
   }
 }
 
@@ -20,6 +20,13 @@ width: 1290px;
 }
 
 @media only screen and (max-width: 1000px) {
+	.page,
+	#header-desktop .header-wrapper{
+		  width: 100%;
+		  box-sizing: border-box;
+		  -webkit-box-sizing: border-box;
+		  padding: 0 1rem;
+	}
 	#homenavigation .box3 li{
 		width: 12.5%;
 	}
@@ -291,7 +298,9 @@ width: 1290px;
 	.single .post-footer .post-info .post-info-line .post-info-md{
 		width: auto;
 	}
-	.newslist_conbox .pagelistcon{
+	.newslist_conbox .pagelistcon,
+	.navssinglebox
+	{
 		margin-left: 0;
 	}
 	.smheadnavbox{

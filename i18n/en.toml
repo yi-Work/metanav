@@ -207,4 +207,9 @@ other = "prev"
 other = "next"
 
 [more]
-other = "更多"
+other = "more"
+
+[navtext1]
+other = "Cumulative access"
+[navtext2]
+other = "Visit Site"

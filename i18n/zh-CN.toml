@@ -208,3 +208,8 @@ other = "下一篇"
 
 [more]
 other = "更多"
+
+[navtext1]
+other = "累计访问"
+[navtext2]
+other = "访问站点"

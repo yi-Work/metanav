@@ -7,6 +7,7 @@ lastmod: 2022-03-25T16:45:40+08:00
 draft: false
 authors: ["Xiaoyi"]
 featuredImage: "featured-image.webp"
+link: "https://www.baidu.com/"
 
 tags: ["ceshi"]
 categories: ["navigation"]
