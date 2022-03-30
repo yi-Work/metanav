@@ -1,0 +1,113 @@
+{{- define "content" -}}
+{{- $swipercss := resources.Get "css/zdycj/swiper.min.css" -}}
+{{- $jqueryjs := resources.Get "js/zdycj/jquery.min.js" -}}
+{{- $fontsjs := resources.Get "js/zdycj/fonts.js" -}}
+{{- $vuejs := resources.Get "js/zdycj/vue.js" -}}
+{{- $swiperjs := resources.Get "js/zdycj/swiper.min.js" -}}
+<link rel="stylesheet" href="{{ $swipercss.RelPermalink }}">
+<script type="text/javascript" src="{{ $jqueryjs.RelPermalink }}"></script>
+<script type="text/javascript" src="{{ $fontsjs.RelPermalink }}"></script>
+<script type="text/javascript" src="{{ $vuejs.RelPermalink }}"></script>
+<script type="text/javascript" src="{{ $swiperjs.RelPermalink}}"></script>
+	{{- $params := .Scratch.Get "params" -}}
+	
+	<div class="page home">
+		<!-- 幻灯片 -->
+		{{- partial "home/slide.html" . -}}
+		
+		<!-- Content text -->
+		{{- partial "home/content.html" . -}}
+		<!-- 新闻 -->
+		<div class="titleb">
+			<h3 class=""><span>
+				<svg class="icon" aria-hidden="true">
+				    <use xlink:href="#icon-wenzhang"></use>
+				</svg>
+			</span> {{ T `indextext1`}}</h3>
+			<a class="morebtn" href="news/">More ></a>
+		</div>
+		{{- partial "home/news.html" . -}}
+		
+		<!-- 广告位 -->
+		<div class="zdy_homeadbox"></div>
+		
+		<!-- 导航 -->
+		<div class="titleb">
+			<h3 class=""><span>
+				<svg class="icon" aria-hidden="true">
+				    <use xlink:href="#icon-wenzhang"></use>
+				</svg>
+			</span> {{ T `indextext2`}}</h3>
+			<a class="morebtn" href="navigation/">More ></a>
+		</div>
+		{{- partial "home/navigation.html" . -}}
+		
+		<!-- 广告位 -->
+		<div class="zdy_homeadbox"></div>
+		
+		<!-- 游戏 -->
+		<div class="titleb">
+			<h3 class=""><span>
+				<svg class="icon" aria-hidden="true">
+				    <use xlink:href="#icon-wenzhang"></use>
+				</svg>
+			</span> {{ T `indextext3`}}</h3>
+			<a class="morebtn" href="games/">More ></a>
+		</div>
+		{{- partial "home/playtoearn.html" . -}}
+		
+		<!-- 广告位 -->
+		<div class="zdy_homeadbox"></div>
+		
+		
+		<div class="zdy_homelmorebox">
+			<p class="text1">{{ T `indextext4`}}<br/>{{ T `indextext5`}}</p>
+			<p class="text2">{{ T `indextext6`}}<br/>{{ T `indextext7`}}</p>
+			<p class="text3">{{ T `indextext8`}}</p>
+			<a href="#" class="lmorebtn">{{ T `indextext9`}}</a>
+		</div>
+		<div class="zdy_homemsgbox">
+			<ul>
+				<li>
+					<span class="ico">
+						<svg class="icon" aria-hidden="true">
+						    <use xlink:href="#icon-discord"></use>
+						</svg>
+					</span>
+					<p>{{ T `indextext10`}}</p>
+					<a target="_blank" href="{{.Site.Params.social.Discord}}">{{ T `indextext11`}}</a>
+				</li>
+				<li>
+					<span class="ico">
+						<svg class="icon" aria-hidden="true">
+						    <use xlink:href="#icon-twitter"></use>
+						</svg>
+					</span>
+					<p>{{ T `indextext12`}}</p>
+					<a target="_blank" href="{{.Site.Params.social.Twitter}}">{{ T `indextext13`}}</a>
+				</li>
+				<li>
+					<span class="ico">
+						<svg class="icon" aria-hidden="true">
+						    <use xlink:href="#icon-GitHub1"></use>
+						</svg>
+					</span>
+					<p>{{ T `indextext14`}}</p>
+					<a target="_blank" href="{{.Site.Params.social.GitHub}}">{{ T `indextext15`}}</a>
+				</li>
+				<li>
+					<span class="ico">
+						<svg class="icon" aria-hidden="true">
+						    <use xlink:href="#icon-opencollective"></use>
+						</svg>
+					</span>
+					<p>{{ T `indextext16`}}</p>
+					<a target="_blank" href="{{.Site.Params.social.Collective}}">{{ T `indextext17`}}</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- ads -->
+	{{- partial "home/ad.html" . -}}
+{{ end }}
