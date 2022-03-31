@@ -9,7 +9,7 @@ authors: ["Xiaoyi"]
 featuredImage: "featured-image.webp"
 link: "https://www.baidu.com/"
 
-tags: ["ceshi"]
+tags: ["ceshi","closed alpha"]
 categories: ["navigation"]
 navigation: ["Metaverse News","Weibo"]
 

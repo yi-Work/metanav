@@ -46,12 +46,6 @@
 					<a target="_blank" class="linkbtn" href="{{ $params.link }}">{{ T `navtext2`}}</a>
 				</div>
 			</div>
-			
-			
-			
-			
-			
-			
 			{{- /* Series list */ -}}
 			{{- if $params.series | and $params.seriesNavigation -}}
 			        {{- range $key, $value := .Site.Taxonomies.series -}}
@@ -104,11 +98,26 @@
 			{{- /* Comment */ -}}
 			{{- partial "comment.html" . -}}
 		</div>
-		<div class="articlecataloguebox articlecatalogueboxad" ><!-- id="toc-static" -->
-			<div class="">
-				
+		<!-- 相关资讯 -->
+		<div class="relevantbox articlecatalogueboxad" >
+			<!-- {{ "newstags" | relLangURL }}?tags={{ range .Params.tags }}{{ . | urlize }},{{ end }} -->
+			<div class="titbox clear">
+				<p class="tit">{{ T `relevantcon`}}</p><a href="{{"news" | relLangURL}}" class="morebtn">{{ T `more`}} ></a>
 			</div>
-			<!-- {{ partial "main/ad3" . -}} -->
+			<div class="">
+				{{- $pages := where .Site.RegularPages "Type" "news" -}}
+				{{- $pages := where $pages "Params.tags" "intersect" .Params.tags -}}
+				
+				{{- $pages := where $pages "Params.hidePage" "!=" true -}}
+				{{ range $elem_index, $elem_val :=$pages }}
+					{{ if lt $elem_index 6}}
+					<div class="relevantlistli">
+					{{- partial "single/relevantsummary.html" . -}}
+					</div>
+					{{ end }}
+				{{ end }}
+			</div>
+			{{ partial "main/ad3" . -}}
 		</div>
 			
 	</div>

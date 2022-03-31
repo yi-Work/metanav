@@ -1,4 +1,4 @@
-<div class="zdy_pageadbox">
+<div class="zdy_pageadbox3">
 {{- $pages := where .Site.RegularPages "Type" "ads" -}}
 {{- range $elem_index, $elem_val :=$pages -}}
 
@@ -34,9 +34,9 @@
 		showad3index:null,
 		init:function(){
 			var _this = this;
-			if($(".zdy_pageadbox .zdy_ad3").length>0){
-				_this.showad3index = _this.randomNum(0,$(".zdy_pageadbox .zdy_ad3").length-1);
-				var td = $(".zdy_pageadbox .zdy_ad3").eq(_this.showad3index);
+			if($(".zdy_pageadbox3 .zdy_ad3").length>0){
+				_this.showad3index = _this.randomNum(0,$(".zdy_pageadbox3 .zdy_ad3").length-1);
+				var td = $(".zdy_pageadbox3 .zdy_ad3").eq(_this.showad3index);
 				var addoms = ['<div class="zdy_pagerightad3"><a target="_blank" href="',
 						td.attr("ihref"),
 						'">',
@@ -54,14 +54,14 @@
 				_this.ad3_resizefn();
 			}
 			$(window).on("resize",function(){
-				if($(".zdy_pageadbox .zdy_ad3").length>0){
+				if($(".zdy_pageadbox3 .zdy_ad3").length>0){
 					_this.ad3_resizefn();
 				}
 			});
 		},
 		ad3_resizefn:function(){
 			var _this = this;
-			console.log($(".articlecatalogueboxad").outerHeight())
+			// console.log($(".articlecatalogueboxad").outerHeight())
 			var w = $(".zdy_pagerightad3").outerWidth()/_this.adbl3
 			$(".zdy_pagerightad3").css("height",w)
 		},
