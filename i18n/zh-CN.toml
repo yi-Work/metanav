@@ -237,3 +237,10 @@ other = "看看其他人用dok构建了什么。"
 other = "置顶"
 [recent]
 other = "最新"
+
+[socialcontact]
+other = "Social Contact"
+[gamescreen]
+other = "Game Screen"
+[supportedntfs]
+other = "Supported NFTs"

@@ -42,5 +42,8 @@ blockchain: ["Ethereum","Polygon"]
 nft_support: "Yes"
 free_to_play: "Yes"
 play_to_earn: ["No"]
+
+game_screen: [{link:"123","img":"featured-image.webp"},{link:"123","img":"featured-image.webp"}]
 ---
+
 dfgsdsdf

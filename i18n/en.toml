@@ -237,3 +237,10 @@ other = "Check out what others have build with Doks."
 other = "Pinned"
 [recent]
 other = "Recent"
+
+[socialcontact]
+other = "Social Contact"
+[gamescreen]
+other = "Game Screen"
+[supportedntfs]
+other = "Supported NFTs"
