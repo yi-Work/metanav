@@ -70,3 +70,42 @@
 // .sidebarbox_mb {
 //   flex: 0 1 320px;
 // }
+.sidebarbox_mb1{
+	position: inherit;
+	height: auto;
+	width: 210px;
+	padding-right: 20px;
+	li{
+		padding-bottom: 20px;
+	}
+	.tit{
+		font-size: 16px;
+	}
+	a{
+		padding-left: 0;
+		display: flex;
+		display: -webkit-flex;
+		align-items: center;
+		-webkit-align-items: center;
+		span:nth-of-type(1){
+			flex: 1;
+			-webkit-flex: 1;
+		}
+		span:nth-of-type(2){
+			padding: 0 8px;
+			height: 20px;
+			
+			[theme=light] & {
+				background: $zdy_color8;
+			}
+			[theme=auto] & {
+				background: $zdy_color8;
+			}
+			border-radius: 5px;
+			line-height: 20px;
+			font-size: 12px;
+			font-weight: 400;
+			color: $zdy_color5;
+		}
+	}
+}

@@ -104,6 +104,8 @@ other = "资讯类别"
 
 [games]
 other = "游戏分类"
+[Games]
+other = "玩游戏挣钱"
 
 [navigation]
 other = "导航"
@@ -219,3 +221,19 @@ other = "相关资讯"
 
 [Newstags]
 other = "相关资讯"
+
+[browse]
+other = "浏览"
+
+[allgames]
+other = "所有游戏"
+[types]
+other = "类别"
+
+[gamestext1]
+other = "看看其他人用dok构建了什么。"
+
+[pinned]
+other = "置顶"
+[recent]
+other = "最新"

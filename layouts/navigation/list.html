@@ -86,44 +86,7 @@
 			{{- partial "paginator.html" . -}}
 			</div>
 		{{ end }}
-		</div>
-			<!-- <p class="title">
-				{{ $sidebartype := .Scratch.Get "sidebartype" }}
-				{{if eq $sidebartype .Title}}
-				 {{ T `all`}}
-				{{else}}
-				 {{ T .Title }}
-				{{end}}
-			</p> -->
-			    <!-- {{- $pages := .Pages -}}
-			    {{- $navigation := .Site.Params.home.navigation -}}
-			{{- if eq .Title "Navigation" -}}
-				{{- $pages := where .Site.RegularPages "Type" "navigation" -}}
-				{{- with $navigation.paginate | default .Site.Params.paginate -}}
-				    {{- $pages = $.Paginate $pages . -}}
-				{{- else -}}
-				    {{- $pages = .Paginate $pages -}}
-				{{- end -}}
-				{{- range $pages.Pages -}}
-				    <div class="zdy_newslistli">
-						{{- .Render "summary" -}}
-				    </div>
-				{{- end -}}
-				{{- partial "paginator.html" . -}}
-			{{- else -}}
-				{{- $pages := where $pages "Params.hidePage" "!=" true -}}
-				{{- with $navigation.paginate | default .Site.Params.paginate -}}
-				    {{- $pages = $.Paginate $pages . -}}
-				{{- else -}}
-				    {{- $pages = .Paginate $pages -}}
-				{{- end -}}
-				{{- range $pages.Pages -}}
-				   <div class="zdy_newslistli">
-						{{- .Render "summary" -}}
-				    </div>
-				{{- end -}}
-				{{- partial "paginator.html" . -}}
-			{{- end -}} -->
+			</div>
 		</div>
 	</div>
 </div>

@@ -107,7 +107,6 @@
 			  flex: 1;
 			  -webkit-flex: 1;
 			  margin-top: 24px;
-			  padding: 0 30px;
 			  margin-left: 10px;
 	}
 	.topnav{
@@ -231,5 +230,41 @@
 				margin: 0;
 			}
 		}
+	}
+}
+.gameslist_conbox{
+	.pagelistcon{
+			  [theme=light] & {
+			    background: #fff;
+			  }
+			  [theme=auto] & {
+			    background: #fff;
+			  }
+			  box-shadow: $zdy-bordershow1;
+			  margin-bottom: 20px;
+			  border-radius: 20px;
+			  flex: 1;
+			  -webkit-flex: 1;
+			  margin-top: 24px;
+			  padding: 0 40px;
+			  margin-left: 10px;
+	}
+	.title{
+		padding-top: 40px;
+		height: 30px;
+		line-height: 30px;
+		font-size: 28px;
+		font-weight: bold;
+		margin: 0;
+	}
+	.msgtext{
+		height: 24px;
+		line-height: 24px;
+		font-size: 16px;
+		font-weight: 400;
+		padding-bottom: 20px;
+	}
+	.liconbox{
+		border-bottom: 1px solid $gangbg;
 	}
 }

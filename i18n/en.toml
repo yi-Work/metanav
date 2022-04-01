@@ -104,6 +104,8 @@ other = "News"
 
 [games]
 other = "Game Genre"
+[Games]
+other = "Play to Earn"
 
 [navigation]
 other = "Navigation"
@@ -219,3 +221,19 @@ other = "Relevant information"
 
 [Newstags]
 other = "Relevant information"
+
+[browse]
+other = "BROWSE"
+
+[allgames]
+other = "All Games"
+[types]
+other = "Types"
+
+[gamestext1]
+other = "Check out what others have build with Doks."
+
+[pinned]
+other = "Pinned"
+[recent]
+other = "Recent"
