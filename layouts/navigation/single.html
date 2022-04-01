@@ -1,9 +1,14 @@
  {{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
 {{- define "content" -}}
+{{- $swipercss := resources.Get "css/zdycj/swiper.min.css" -}}
 {{- $jqueryjs := resources.Get "js/zdycj/jquery.min.js" -}}
 {{- $fontsjs := resources.Get "js/zdycj/fonts.js" -}}
+{{- $swiperjs := resources.Get "js/zdycj/swiper.min.js" -}}
+<link rel="stylesheet" href="{{ $swipercss.RelPermalink }}">
 <script type="text/javascript" src="{{ $jqueryjs.RelPermalink }}"></script>
 <script type="text/javascript" src="{{ $fontsjs.RelPermalink }}"></script>
+<script type="text/javascript" src="{{ $swiperjs.RelPermalink}}"></script>
+
 <div class="page single alllist_conbox navssingle_w">
 	{{ .Scratch.Set "sidebartype" "Navigation" }}
 	<!-- ad -->
@@ -95,6 +100,32 @@
 			{{- else if eq .Params.comment false -}}
 			    {{- .Scratch.Set "comment" dict -}}
 			{{- end -}}
+			<!-- 相关资讯 -->
+			<div class="relevantbox conrelevantbox" >
+				<div class="titbox clear">
+					<p class="tit">{{ T `relevantcon`}}</p><a href="{{"news" | relLangURL}}" class="morebtn">{{ T `more`}} ></a>
+				</div>
+				<div class="relevantswiper swiper">
+				  <div class="swiper-wrapper">
+					  {{- $pages := where .Site.RegularPages "Type" "news" -}}
+					  {{- $pages := where $pages "Params.tags" "intersect" .Params.tags -}}
+					  
+					  {{- $pages := where $pages "Params.hidePage" "!=" true -}}
+					  {{ range $elem_index, $elem_val :=$pages }}
+					  	{{ if lt $elem_index 10}}
+					  	<div class="swiper-slide relevantlistli">
+					  	{{- partial "single/relevantsummary.html" . -}}
+					  	</div>
+					  	{{ end }}
+					  {{ end }}
+				  </div>
+				  <div class="swiper-pagination"></div>
+				</div>
+				<!-- <div class="">
+					
+				</div> -->
+			</div>
+			
 			{{- /* Comment */ -}}
 			{{- partial "comment.html" . -}}
 		</div>
@@ -124,6 +155,14 @@
 </div>
 <script type="text/javascript">
 	$(".desktop .menu-item").eq(2).addClass("active");
+	var swiper = new Swiper(".relevantswiper", {
+	        slidesPerView: 3,
+	        spaceBetween: 10,
+	        pagination: {
+	          el: ".swiper-pagination",
+	          clickable: true,
+	        },
+	      });
 </script>
 {{- end -}}
 

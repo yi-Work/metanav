@@ -178,6 +178,8 @@ defaultContentLanguage = "zh-cn"
 
   #  文章页面配置
   [params.page]
+    #  是否显示提交新内容
+	submitnewcontent = false
     #  是否在主页隐藏一篇文章
     hiddenFromHomePage = false
     #  是否在搜索结果中隐藏一篇文章

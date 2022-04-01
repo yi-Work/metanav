@@ -75,7 +75,16 @@ width: 1290px;
 		}
 	}
 }
+@media only screen and (max-width: 900px) {
+	
+}
 @media only screen and (max-width: 820px){
+	.navssingle_w .conrelevantbox{
+		display: block;
+	}
+	.relevantbox{
+		display: none;
+	}
 	#header-desktop .headbox2w{
 		.morebtn{
 			display: block;
@@ -244,7 +253,7 @@ width: 1290px;
 	.sidebarbox_mb{
 		  width: 100%;
 		display: none;
-		padding-top: 0;
+		padding: 0;
 		.ntit{
 			margin: 6px 0;
 			line-height: 28px;
@@ -301,7 +310,10 @@ width: 1290px;
 	.newslist_conbox .pagelistcon,
 	.navssinglebox
 	{
-		margin: 0;
+		margin: 20px 0;
+	}
+	.newslist_conbox .zdy_newslistli{
+		padding: 16px 0;
 	}
 	.smheadnavbox{
 		[theme=auto] & {
@@ -312,9 +324,29 @@ width: 1290px;
 		}
 		
 	}
+	.navlist_conbox .pagelistcon{
+		margin: 24px 0 0;
+		padding: 0;
+	}
 	.navlist_conbox .zdy_navslistli{
 		width: 33.33%;
 	}
+	.navlist_conbox .topnav{
+		display: block;
+		position: relative;
+	}
+	.navlist_conbox .topnav .morebtn{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.navlist_conbox .topnav .tit{
+		width: 100%;
+	}
+	.newslist_conbox .title{
+		padding-top: 20px;
+	}
+	
 }
 @media only screen and (max-width: 600px) {
 	.slideboxw .bigshowb .swiper-slide .title{
