@@ -19,4 +19,29 @@ pinned: false
 
 recommend: false
 recommend1: false
+
+website: "https://play.0xuniverse.com?utm_source=PlayToEarn.net&utm_medium=organic&utm_campaign=gamepage"
+twitter: "https://twitter.com/0xUniverse"
+discord: "https://discordapp.com/invite/R8fwEPC"
+telegram: "https://t.me/OxUniverse"
+github: 
+youtube: 
+twitch: 
+facebook: "https://www.facebook.com/0xUniverse"
+instagram: 
+reddit: "https://www.reddit.com/r/0xUniverse"
+medium: 
+steam: 
+gitbook: 
+googleplay: 
+appstore: 
+
+score: "7"
+status: "Live"
+blockchain: ["Ethereum","Polygon"]
+nft_support: "Yes"
+free_to_play: "Yes"
+play_to_earn: ["No"]
 ---
+
+dfgsdsdf

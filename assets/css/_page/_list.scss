@@ -265,6 +265,122 @@
 		padding-bottom: 20px;
 	}
 	.liconbox{
+		margin-bottom: 36px;
+		.smtit{
+			font-size: 18px;
+			font-weight: bold;
+			margin: 0;
+			padding: 10px 0;
+			border-bottom: 1px solid $gangbg;
+		}
+	}
+	.smliconbox{
+		position: relative;
+	}
+	.zdy_gameslistli::after{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		background: $gangbg;
+		bottom: 0;
+		left: 0;
+	}
+	.zdy_gameslistli{
+		float: left;
+		width: 50%;
+		padding: 20px 0;
+		padding-bottom: 21px;
 		border-bottom: 1px solid $gangbg;
+		.featured-image-preview{
+			width: 96px;
+			height: 96px;
+			border-radius: 15px;
+			overflow: hidden;
+			a{
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.summary{
+			display: flex;
+			display: -webkit-flex;
+		}
+		.zdy_rightbox{
+			padding-left: 9px;
+			overflow: hidden;
+			flex: 1;
+			-webkit-flex: 1;
+			.single-title{
+				margin: 0;
+				font-size: 15px;
+				font-weight: bold;
+				color: $header-font-color;
+				line-height: 24px;
+				overflow: hidden;
+				@include box(vertical);
+				-webkit-line-clamp: 1;
+				padding-top: 4px;
+				a{
+					[theme=auto] & {
+					  color: $zdy_color1
+					}
+					[theme=light] & {
+					  color: $zdy_color1
+					}
+				}
+				
+			}
+			.content{
+				padding-top: 6px;
+				font-size: 13px;
+				font-weight: 400;
+				color: $zdy_color2;
+				line-height: 18px;
+				overflow: hidden;
+				height: 36px;
+				@include box(vertical);
+				-webkit-line-clamp: 2;
+				[theme=dark] & {
+				  color: $global-font-secondary-color-dark;
+				}
+				[theme=black] & {
+				  color: $global-font-secondary-color-black;
+				}
+			}
+			[theme=auto] & {
+			  .gtypesbox,.gtypesbox a{
+			  	color: $zdy_color6;
+			  }
+			  .gtypesbox a:hover {
+			    color: $global-link-hover-color;
+			  }
+			}
+			[theme=light] & {
+			  .gtypesbox,.gtypesbox a{
+			  	color: $zdy_color6;
+			  }
+			  .gtypesbox a:hover {
+			    color: $global-link-hover-color;
+			  }
+			}
+			.gtypesbox{
+				display: block;
+				line-height: 18px;
+				height: 18px;
+				overflow: hidden;
+				@include box(vertical);
+				-webkit-line-clamp: 1;
+			}
+			.gtypesbox a{
+				font-size: 13px;
+			}
+		}
 	}
 }

@@ -56,6 +56,8 @@ hasCJKLanguage = true
 			paginate = 12
 			# 二类列表页数量
 			paginate1 = 40
+		[zh-cn.params.list.games]
+			paginate = 12
 
 [en]
 weight = 2
@@ -115,3 +117,5 @@ hasCJKLanguage = true
 			paginate = 12
 			# 二类列表页数量
 			paginate1 = 40
+		[en.params.list.games]
+			paginate = 12

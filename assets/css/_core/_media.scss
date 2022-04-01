@@ -131,6 +131,10 @@ width: 1290px;
 		-webkit-flex: inherit;
 		margin: 66px 0px 0;
 	}
+	
+	.gameslist_conbox .zdy_gameslistli{
+		width: 100%;
+	}
 }
 @media only screen and (max-width: 680px) {
 	.wrapper main .container {
@@ -346,7 +350,6 @@ width: 1290px;
 	.newslist_conbox .title{
 		padding-top: 20px;
 	}
-	
 }
 @media only screen and (max-width: 600px) {
 	.slideboxw .bigshowb .swiper-slide .title{
