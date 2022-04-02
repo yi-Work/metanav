@@ -2,7 +2,7 @@
 
 <div class="post-footer" id="post-footer">
 	{{- if .IsPage -}}
-	<div class="edit-pagebox">
+	<div class="edit-pagebox clear">
 		{{- $post_info := slice -}}
 		{{- if $params.linktomarkdown -}}
 			{{- with .OutputFormats.Get "markdown" -}}
@@ -37,7 +37,18 @@
 			</a>
 		</span>
 		{{- end -}}
-		
+		<span class="lastmodtext">
+			{{- with .Site.Params.dateformat | default "2006-01-02" | .Lastmod.Format -}}
+			    {{- dict "Date" . | T "updatedOnDate" -}}
+			    {{- if $.Site.Params.gitRepo -}}
+			        {{- with $.GitInfo -}}
+			            &nbsp;<a class="git-hash" href="{{ printf `%v/commit/%v` $.Site.Params.gitRepo .Hash }}" target="_blank" title="commit by {{ .AuthorName }}({{ .AuthorEmail }}) {{ .Hash }}: {{ .Subject }}" rel="noopener noreferrer">
+			                <i class="fas fa-hashtag fa-fw"></i>{{- .AbbreviatedHash -}}
+			            </a>
+			        {{- end -}}
+			    {{- end -}}
+			{{- end -}}
+		</span>
 	</div>
 	{{- end -}}
     <div class="post-info">

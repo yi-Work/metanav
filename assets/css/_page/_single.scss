@@ -466,9 +466,46 @@
 	color: $zdy_color5;
 	line-height: 22px;
 	margin:0;
+	padding-bottom: 10px;
 	margin: 10px 0 20px;
 	border-bottom:1px solid $gangbg;
 	@include box(vertical);
 	-webkit-line-clamp: 2;
 	overflow: hidden;
+}
+
+.conrelevantbox .swiper-button-next,
+.conrelevantbox .swiper-button-prev{
+	margin-top: -12px;
+	 width: 24px;
+	 height: 24px;
+	 background-size: 100% 100%;
+	 
+ }
+.conrelevantbox .swiper-button-next,
+.conrelevantbox .swiper-container-rtl .swiper-button-prev{
+	right: 0;
+}
+.conrelevantbox .swiper-button-prev,
+.conrelevantbox .swiper-container-rtl .swiper-button-next{
+	left: 0;
+}
+.conrelevantbox{
+	.rightbox{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background: rgba(0,0,0,.5);
+		.single-title{
+			margin: 0;
+			font-size: 12px;
+			line-height: 18px;
+			color: #fff;
+			padding: 0 4px;
+		}
+	}
+	.relevantlistli{
+		position: relative;
+	}
 }

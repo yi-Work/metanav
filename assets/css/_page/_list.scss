@@ -232,6 +232,9 @@
 		}
 	}
 }
+#alllist_con{
+	padding-bottom: 20px;
+}
 .gameslist_conbox{
 	.pagelistcon{
 			  [theme=light] & {
@@ -265,7 +268,7 @@
 		padding-bottom: 20px;
 	}
 	.liconbox{
-		margin-bottom: 36px;
+		padding-bottom: 36px;
 		.smtit{
 			font-size: 18px;
 			font-weight: bold;

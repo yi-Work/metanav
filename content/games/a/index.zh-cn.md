@@ -43,7 +43,8 @@ nft_support: "Yes"
 free_to_play: "Yes"
 play_to_earn: ["No"]
 
-game_screen: [{link:"123","img":"featured-image.webp"},{link:"123","img":"featured-image.webp"}]
+game_screen: ["featured-image.webp","featured-image.webp","featured-image.webp","featured-image.webp","featured-image.webp"]
+supported_ntfs: [{"img":"featured-image.webp","link":"#","title":"Cyborg Legends"}]
 ---
 
 dfgsdsdf

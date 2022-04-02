@@ -150,12 +150,12 @@ width: 1290px;
 	  display: block;
 	}
 	.alllist_conbox{
-		[theme=auto] & {
-		  background: none;
-		}
-		[theme=light] & {
-		  background: none;
-		}
+		// [theme=auto] & {
+		//   background: none;
+		// }
+		// [theme=light] & {
+		//   background: none;
+		// }
 	}
 	.page {
 		padding: 0 1rem;
@@ -322,15 +322,15 @@ width: 1290px;
 	.newslist_conbox .zdy_newslistli{
 		padding: 16px 0;
 	}
-	.smheadnavbox{
-		[theme=auto] & {
-		  background: $global-background-color;
-		}
-		[theme=light] & {
-		 background: $global-background-color;
-		}
+	// .smheadnavbox{
+	// 	[theme=auto] & {
+	// 	  background: $global-background-color;
+	// 	}
+	// 	[theme=light] & {
+	// 	 background: $global-background-color;
+	// 	}
 		
-	}
+	// }
 	.navlist_conbox .pagelistcon{
 		margin: 24px 0 0;
 		padding: 0;
@@ -352,6 +352,53 @@ width: 1290px;
 	}
 	.newslist_conbox .title{
 		padding-top: 20px;
+	}
+	.gameslist_conbox .pagelistcon{
+		margin-left: 0;
+		padding: 0 20px;
+	}
+	.gamesingle_w .gamescreenbox .zcon{
+		padding: 10px;
+	}
+	.gamesingle_w .supportedntfsbox .zcon li{
+		padding: 20px 20px 10px;
+	}
+	.gamesingle_w .supportedntfsbox .zcon li a .tit{
+		font-size: 12px;
+	}
+	.gamesinglebox{
+		margin: 0;
+	}
+	.gamescreenswiper .swiper-button-next, .gamescreenswiper .swiper-container-rtl .swiper-button-prev{
+		right:10px
+	}
+	.gamescreenswiper .swiper-button-prev, .gamescreenswiper .swiper-container-rtl .swiper-button-next{
+		left: 10px;
+	}
+	.single .post-footer .lastmodtext{
+		float: none;
+		display: block;
+	}
+	.gamesingle_w .topbox .featured-image,
+	.navssingle_w .topbox .featured-image{
+		width: 80px;
+		height: 80px;
+	}
+	.gamesingle_w .topbox .conbox .single-title,
+	.navssingle_w .topbox .conbox .single-title{
+		font-size: 16px;
+		margin-top: 0;
+	}
+	.gamesingle_w .topbox .conbox .single-description,
+	.navssingle_w .topbox .conbox .single-description{
+		font-size: 13px;
+		line-height: 20px;
+		height: 40px;
+	}
+	.gamesingle_w .topbox .rightbox .linkbtn,
+	.navssingle_w .topbox .rightbox .linkbtn{
+		width: 100px;
+		height: 50px;
 	}
 }
 @media only screen and (max-width: 600px) {
