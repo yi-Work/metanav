@@ -33,25 +33,30 @@ width: 1290px;
 	#homenavigation .box3 li .imgbox{
 		margin: 0 15px;
 	}
-	.newslist_conbox .summary .featured-image-preview{
+	.newslist_conbox .summary .featured-image-preview,
+	.communitylist_conbox .summary .featured-image-preview{
 		  width: 114px;
 		  height: 85px;
 	}
-	.newslist_conbox .summary .zdy_rightbox .single-title{
+	.newslist_conbox .summary .zdy_rightbox .single-title,
+	.communitylist_conbox .summary .zdy_rightbox .single-title{
 		  -webkit-line-clamp: 1;
 		  height: 28px;
 		  font-size: 16px;
 	}
-	.newslist_conbox .summary .zdy_rightbox .tipbox{
+	.newslist_conbox .summary .zdy_rightbox .tipbox,
+	.communitylist_conbox .summary .zdy_rightbox .tipbox{
 		  font-size: 12px;
 		  padding-bottom: 7px;
 	}
-	.newslist_conbox .summary .zdy_rightbox .content{
+	.newslist_conbox .summary .zdy_rightbox .content,
+	.communitylist_conbox .summary .zdy_rightbox .content{
 		  -webkit-line-clamp: 1;
 		  height: 22px;
 		  font-size: 13px;
 	}
-	.newslist_conbox .pagelistcon{
+	.newslist_conbox .pagelistcon,
+	.communitylist_conbox .pagelistcon{
 		  padding: 0 20px;
 	}
 	.newssingle_w .newssinglebox{
@@ -315,11 +320,13 @@ width: 1290px;
 		width: auto;
 	}
 	.newslist_conbox .pagelistcon,
+	.communitylist_conbox .pagelistcon,
 	.navssinglebox
 	{
 		margin: 20px 0;
 	}
-	.newslist_conbox .zdy_newslistli{
+	.newslist_conbox .zdy_newslistli,
+	.communitylist_conbox .zdy_newslistli{
 		padding: 16px 0;
 	}
 	// .smheadnavbox{
@@ -350,7 +357,8 @@ width: 1290px;
 	.navlist_conbox .topnav .tit{
 		width: 100%;
 	}
-	.newslist_conbox .title{
+	.newslist_conbox .title,
+	.communitylist_conbox .title{
 		padding-top: 20px;
 	}
 	.gameslist_conbox .pagelistcon{

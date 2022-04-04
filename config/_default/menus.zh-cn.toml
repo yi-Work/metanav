@@ -35,7 +35,7 @@
   pre = ""
   post = ""
   name = "社区"
-  url = "/community/"
+  url = "/community/activities/a/"
   title = ""
   weight = 5
 
