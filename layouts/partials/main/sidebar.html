@@ -9,11 +9,11 @@
 	{{- if eq $sidebartype "News" -}}
 		{{- range $elem_index, $elem_val :=where .Site.RegularPages "Type" $thistypes -}}
 			<li>
-				<p class="tit"><span>
+				<p class="tit"><!-- <span>
 					<svg class="icon" aria-hidden="true">
 						<use xlink:href="#icon-wenzhang"></use>
 					</svg>
-				</span>{{.Title}}</p>
+				</span> --><i class="fas fa-chevron-right fa-fw"></i>{{.Title}}</p>
 				<div class="conlist">
 					<p>
 						{{ $.Scratch.Set "thisnav" .Params.news }}

@@ -38,3 +38,14 @@
   url = "/community/"
   title = ""
   weight = 5
+
+[[community]]
+  name = "最新活动"
+  weight = 1
+  identifier = "activities"
+  url = "/community/activities/"
+[[community]]
+  name = "Famland元宇宙"
+  weight = 2
+  identifier = "famland-metaverse"
+  url = "/community/famland-metaverse/"

@@ -244,3 +244,10 @@ other = "Social Contact"
 other = "Game Screen"
 [supportedntfs]
 other = "Supported NFTs"
+
+[community]
+other = "社区"
+[activities]
+other = "最新活动"
+[famland-metaverse]
+other = "Famland元宇宙"

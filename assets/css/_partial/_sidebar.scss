@@ -1,4 +1,4 @@
-.sidebarbox_mb{
+.sidebarbox_mb,.sidebarbox_mb2{
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 	
@@ -10,7 +10,8 @@
 	.active .conlist{
 		display: block;
 	}
-	.active .tit span{
+	.active .tit span,
+	.active .tit .fa-chevron-right{
 		transform: rotate(90deg);
 	}
 	.ntit{
@@ -108,4 +109,7 @@
 			color: $zdy_color5;
 		}
 	}
+}
+.sidebarbox_mb2{
+	
 }

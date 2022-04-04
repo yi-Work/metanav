@@ -38,3 +38,14 @@
   url = "/community/"
   title = ""
   weight = 5
+  
+[[community]]
+  name = "Activities"
+  weight = 1
+  identifier = "activities"
+  url = "/community/activities/"
+[[community]]
+  name = "Famland Metaverse"
+  weight = 2
+  identifier = "famland-metaverse"
+  url = "/community/famland-metaverse/"
