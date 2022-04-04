@@ -1,0 +1,126 @@
+{{- define "list" }}
+    {{- .Params.Title | default (T .Section) | default .Section | dict "Some" | T "allSome" }} - {{ .Site.Title -}}
+{{- end -}}
+{{- define "content" -}}
+{{- $jqueryjs := resources.Get "js/zdycj/jquery.min.js" -}}
+{{- $fontsjs := resources.Get "js/zdycj/fonts.js" -}}
+<script type="text/javascript" src="{{ $jqueryjs.RelPermalink }}"></script>
+<script type="text/javascript" src="{{ $fontsjs.RelPermalink }}"></script>
+
+<div class="page alllist_conbox tagslist_conbox">
+	{{ .Scratch.Set "sidebartype" "Tags" }}
+	<!-- ad -->
+	{{ partial "main/ad" . -}}
+	<!-- 小导航 -->
+	{{ partial "main/smheadnav" . -}}
+	<div class="conbox" id="alllist_con">
+		<!-- 侧边栏 -->
+		{{ partial "main/sidebar1" . -}}
+		
+		<div class="pagelistcon">
+			<p class="title">
+				{{ $sidebartype := .Scratch.Get "sidebartype" }}
+				{{if eq $sidebartype .Title}}
+				 {{ T `all`}}
+				{{else}}
+				 {{ .Title }}
+				{{end}}
+			</p>
+			
+			<div class="clear">
+				{{- $pages := .Pages -}}
+				{{- $tags := .Site.Params.list.tags -}}
+				{{- if eq .Title "News" -}}
+					{{- $pages := where .Site.RegularPages "Type" "news" -}}
+					{{- with $tags.paginate | default .Site.Params.paginate -}}
+						{{- $pages = $.Paginate $pages . -}}
+					{{- else -}}
+						{{- $pages = .Paginate $pages -}}
+					{{- end -}}
+					{{- range $pages.Pages -}}
+						<div class="zdy_newslistli">
+							{{- .Render "summary" -}}
+						</div>
+					{{- end -}}
+					{{- partial "paginator.html" . -}}
+				{{- else -}}
+					{{- $pages := where $pages "Params.hidePage" "!=" true -}}
+					{{- with $tags.paginate | default .Site.Params.paginate -}}
+						{{- $pages = $.Paginate $pages . -}}
+					{{- else -}}
+						{{- $pages = .Paginate $pages -}}
+					{{- end -}}
+					{{- range $pages.Pages -}}
+						{{ if .Params.news}}
+							<div class="zdy_newslistli">
+								{{- .Render "summary" -}}
+							</div>
+						{{ else if .Params.navigation}}
+							<div class="zdy_navslistli">
+								{{- .Render "summary" -}}
+							</div>
+						{{ else if .Params.games}}
+							<div class="zdy_gameslistli">
+								{{- .Render "summary" -}}
+							</div>
+						{{ else if .Params.community}}
+							<div class="zdy_communitylistli">
+								{{- .Render "summary" -}}
+							</div>
+						{{end}}
+					{{- end -}}
+					{{- partial "paginator.html" . -}}
+				{{- end -}}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- {{ $thistags := .Title }}
+{{- $tags := .Site.Params.list.tags -}}
+
+{{- $pages := where .Site.RegularPages "Type" "news" -}}
+{{- $pages := where $pages "Params.tags" "intersect" (slice $thistags) -}}
+{{- with $tags.paginate | default .Site.Params.paginate -}}
+	{{- $pages = $.Paginate $pages . -}}
+{{- else -}}
+	{{- $pages = .Paginate $pages -}}
+{{- end -}}
+<div class="tags_c tags_newsbox">
+	{{$pages.TotalPages}}
+	{{- range $pages.Pages -}}
+	
+	<div class="zdy_newslistli">
+		{{- .Render "summary" -}}
+	</div>
+	{{- end -}}
+	
+</div>
+
+{{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
+	{{ if eq $taxonomyname $thistags}}
+	{{ sub .Count 1 }}
+	{{ end }}
+{{ end }}
+{{- $pages1 := where .Site.RegularPages "Type" "navigation" -}}
+{{- $pages1 := where $pages1 "Params.tags" "intersect" (slice $thistags) -}}
+{{- with $tags.paginate | default .Site.Params.paginate -}}
+	{{- $pages1 = $.Paginate $pages1 . -}}
+{{- else -}}
+	{{- $pages1 = .Paginate $pages1 -}}
+{{- end -}}
+<div class="tags_c tags_navsbox">
+	{{- range $pages1.Pages -}}
+	<div class="zdy_navslistli">
+		{{- .Render "summary" -}}
+	</div>
+	{{- end -}}
+</div>
+
+{{- partial "paginator.html" . -}}
+ --><script type="text/javascript">
+	$(".tags_newsbox").append($(".zdy_newslistli"));
+	$(".tags_navsbox").append($(".zdy_navslistli"));
+	$(".tags_gamesbox").append($(".zdy_gameslistli"));
+	$(".tags_communitybox").append($(".zdy_communitylistli"));
+</script>
+{{- end -}}

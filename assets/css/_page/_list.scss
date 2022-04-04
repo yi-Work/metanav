@@ -12,7 +12,8 @@
 	
 }
 .newslist_conbox,
-.communitylist_conbox{
+.communitylist_conbox,
+.tagslist_conbox{
 	.pagelistcon{
 			  [theme=light] & {
 			    background: #fff;
@@ -97,7 +98,8 @@
 		}
 	}
 }
-.navlist_conbox{
+.navlist_conbox,
+.tagslist_conbox{
 	.conli{
 		padding-bottom: 15px;
 	}
@@ -236,7 +238,8 @@
 #alllist_con{
 	padding-bottom: 20px;
 }
-.gameslist_conbox{
+.gameslist_conbox,
+.tagslist_conbox{
 	.pagelistcon{
 			  [theme=light] & {
 			    background: #fff;
@@ -387,4 +390,44 @@
 			}
 		}
 	}
+}
+.tagslist_conbox{
+	.zdy_navslistli{
+		padding: 20px 0 0;
+		width: 100%;
+		float: none;
+	}
+	.zdy_gameslistli{
+		width: 100%;
+		float: none;
+		.zdy_rightbox .single-title{
+			height: auto;
+		}
+	}
+	// .s_topnav{
+	// 	display:flex;
+	// 	display: -webkit-flex;
+	// }
+	// .title{
+	// 	flex: 1;
+	// 	-webkit-flex: 1;
+	// }
+	// ul{
+	// 	display:flex;
+	// 	display: -webkit-flex;
+	// 	padding-top: 32px;
+	// 	li{
+	// 		padding: 0 8px;
+	// 	}
+	// 	li.active a{
+	// 		color: $zdy_color1;
+	// 	}
+	// }
+	// .tags_c{
+	// 	// display: none;
+	// }
+	// .tags_cac{
+	// 	display: block;
+	// }
+	
 }

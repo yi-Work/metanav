@@ -165,8 +165,9 @@ pinned: false
 recommend: true
 #### 首页轮播图旁边固定的三个展示位置
 recommend1: true 
-
-#### 分类
+#### 社区分类-标签都必须是社区分类相关
+community: []
+#### 用于左侧边栏
 menu: 
   community:
     parent: "activities"
