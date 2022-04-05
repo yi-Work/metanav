@@ -4,7 +4,7 @@ baseURL = "/"
 # theme = "DoIt"
 # [en, zh-cn, fr, ...] 设置默认的语言
 defaultContentLanguage = "zh-cn"
-
+relativeUrls = true
 
 [params]
   #  DoIt 主题版本
