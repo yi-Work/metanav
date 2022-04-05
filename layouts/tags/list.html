@@ -44,7 +44,7 @@
 							</div>
 						{{ else if .Params.navigation}}
 							<div class="zdy_navslistli">
-								{{- .Render "summary" -}}
+								{{- partial "summary/tags_summary.html" . -}}
 							</div>
 						{{ else if .Params.games}}
 							<div class="zdy_gameslistli">
