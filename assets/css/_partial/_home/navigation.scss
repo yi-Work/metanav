@@ -2,7 +2,7 @@
 	.box2{
 		  background:$zdy-bg1;
 		  box-shadow: $zdy-bordershow;
-		  border-radius: 10px;
+		  border-radius: $border-radius-size20;
 		  padding:30px 20px 20px;
 		  [theme=dark] & {
 		    box-shadow: $zdy-bordershow-dark;
@@ -51,7 +51,7 @@
 	.box3{
 		  background:$zdy-bg1;
 		  box-shadow: $zdy-bordershow;
-		  border-radius: 10px;
+		  border-radius: $border-radius-size20;
 		  padding:30px 20px 15px;
 		  [theme=dark] & {
 		    box-shadow: $zdy-bordershow-dark;
@@ -75,7 +75,7 @@
 			  .imgbox{
 				  margin: 0 20px;
 				  overflow: hidden;
-				  border-radius: 10px;
+				  border-radius: $border-radius-size15;
 			  }
 			  .imgbox img{
 				  width: 100%;

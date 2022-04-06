@@ -5,7 +5,7 @@
 		  height: 30px;
 		  line-height: 30px;
 		  background: #F3F5F7;
-		  border-radius: 10px;
+		  border-radius: $border-radius-size20;
 		  margin-right: 8px;
 		  margin-bottom: 8px;
 		  [theme=dark] & {
@@ -29,6 +29,7 @@
 			color: $zdy_color1;
 			@include box(vertical);
 			-webkit-line-clamp: 1;
+			font-size: 13px;
 		}
 		.gtypesbox a{
 			font-size: 13px;
@@ -53,7 +54,7 @@
 			box-shadow: $zdy-bordershow;
 			padding: 15px;
 			background: $zdy-bg1;
-			border-radius: 10px;
+			border-radius: $border-radius-size20;
 			display: flex;
 			display: -webkit-flex;
 			
@@ -72,7 +73,7 @@
 		 height: 80px;
 		  overflow: hidden;
 		  position: relative;
-		  border-radius: 5px;
+		  border-radius: $border-radius-size20;
 		  @include transition(transform 0.4s ease);
 		
 		  img {

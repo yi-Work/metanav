@@ -6,7 +6,7 @@
 	.bigshowb{
 		position: relative;
 		overflow: hidden;
-		border-radius: 10px;
+		border-radius: $border-radius-size20;
 	}
 	.bigshows{
 		-webkit-flex: 1;
@@ -31,7 +31,7 @@
 		ul li{
 			background: #000;
 			overflow: hidden;
-			border-radius: 10px;
+			border-radius: $border-radius-size20;
 		}
 		ul li a{
 			display: block;

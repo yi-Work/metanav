@@ -13,6 +13,9 @@ width: 1290px;
 	  -webkit-box-sizing: border-box;
 	  padding: 0 2rem;
   }
+  .home .index_subscribebox .container{
+	  padding: 0 2rem;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -28,7 +31,7 @@ width: 1290px;
 		  padding: 0 1rem;
 	}
 	#homenavigation .box3 li{
-		width: 12.5%;
+		width: 10%;
 	}
 	#homenavigation .box3 li .imgbox{
 		margin: 0 15px;
@@ -184,16 +187,19 @@ width: 1290px;
 		}
 	}
 	
-	footer .footer-container{
+	.home .index_subscribebox .container{
 		  display: block;
 		  
-		  .footer-leftbox,
-		  .footer-rightbox{
+		  .leftbox,
+		  .rightbox{
 			padding: 0;
 		  }
-	}
-	footer .footer-container *{
-		  text-align: center;
+		  *{
+		  	  text-align: center;
+		  }
+	} 
+	.home .zdy_homemsgbox li a{
+		width: 140px;
 	}
 	.slideboxw{
 		display: block

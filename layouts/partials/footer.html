@@ -1,17 +1,7 @@
 {{- if ne .Site.Params.footer.enable false -}}
-     <footer class="footer">
+     <footer class="footer" style="display: none;">
          <div class="footer-container">
- 			<div class="footer-leftbox">
- 				<p class="tit1">{{ T `footertext1`}}</p>
- 				<p>{{ T `footertext2`}}</p>
- 			</div>
- 			<div class="footer-rightbox">
- 				<div class="inputbox">
- 					<p class="p1"><input type="text" name="" id="" value="" placeholder="{{T `footertext5`}}"/></p>
- 					<p><span>{{ T `footertext3`}}</span></p>
- 				</div>
- 				<p class="p2">{{ T `footertext4`}}</p>
- 			</div>
+ 			
              <!-- {{- /* Custom Content */ -}}
              {{- with .Site.Params.footer.custom -}}
                  <div class="footer-line">

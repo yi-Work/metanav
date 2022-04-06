@@ -75,7 +75,9 @@
 						</svg>
 					</span>
 					<p>{{ T `indextext10`}}</p>
-					<a target="_blank" href="{{.Site.Params.social.Discord}}">{{ T `indextext11`}}</a>
+					<div class="b_ab">
+						<a target="_blank" href="{{.Site.Params.social.Discord}}">{{ T `indextext11`}}</a>
+					</div>
 				</li>
 				<li>
 					<span class="ico">
@@ -84,7 +86,9 @@
 						</svg>
 					</span>
 					<p>{{ T `indextext12`}}</p>
-					<a target="_blank" href="{{.Site.Params.social.Twitter}}">{{ T `indextext13`}}</a>
+					<div class="b_ab">
+						<a target="_blank" href="{{.Site.Params.social.Twitter}}">{{ T `indextext13`}}</a>
+					</div>
 				</li>
 				<li>
 					<span class="ico">
@@ -93,7 +97,9 @@
 						</svg>
 					</span>
 					<p>{{ T `indextext14`}}</p>
-					<a target="_blank" href="{{.Site.Params.social.GitHub}}">{{ T `indextext15`}}</a>
+					<div class="b_ab">
+						<a target="_blank" href="{{.Site.Params.social.GitHub}}">{{ T `indextext15`}}</a>
+					</div>
 				</li>
 				<li>
 					<span class="ico">
@@ -102,12 +108,31 @@
 						</svg>
 					</span>
 					<p>{{ T `indextext16`}}</p>
-					<a target="_blank" href="{{.Site.Params.social.Collective}}">{{ T `indextext17`}}</a>
+					<div class="b_ab">
+						<a target="_blank" href="{{.Site.Params.social.Collective}}">{{ T `indextext17`}}</a>
+					</div>
 				</li>
 			</ul>
+		</div>
+		<div class="index_subscribebox">
+		    <div class="container">
+				<div class="leftbox">
+					<p class="tit1">{{ T `footertext1`}}</p>
+					<p>{{ T `footertext2`}}</p>
+				</div>
+				<div class="rightbox">
+					<div class="inputbox">
+						<p class="p1"><input type="text" name="" id="" value="" placeholder="{{T `footertext5`}}"/></p>
+						<p><span>{{ T `footertext3`}}</span></p>
+					</div>
+					<p class="p2">{{ T `footertext4`}}</p>
+				</div>
+			</div>
 		</div>
 	</div>
 	
 	<!-- ads -->
 	{{- partial "home/ad.html" . -}}
+	
+	
 {{ end }}
