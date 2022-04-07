@@ -139,7 +139,8 @@ other = "全部"
 # === single.html ===
 [contents]
 other = "目录"
-
+[wzml]
+other = "文章目录"
 [publishedOnDate]
 other = "发布于 {{ .Date }}"
 

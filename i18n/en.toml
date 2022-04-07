@@ -139,7 +139,8 @@ other = "all"
 # === single.html ===
 [contents]
 other = "Contents"
-
+[wzml]
+other = "Article catalogue"
 [publishedOnDate]
 other = "published on {{ .Date }}"
 

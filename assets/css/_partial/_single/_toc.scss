@@ -1,6 +1,6 @@
 .toc {
   .toc-title {
-    font-size: $toc-title-font-size;
+    font-size: 17px;
     font-weight: bold;
     text-transform: uppercase;
 	margin-bottom: 10px;
@@ -8,24 +8,32 @@
   }
 
   .toc-content {
-    font-size: $toc-content-font-size;
+    font-size: 14px;
 
     ul {
       text-indent: -0.85rem;
       padding-left: .8rem;
       list-style: none;
-
+		a{
+			position: relative;
+			padding-left: 0.6rem;
+		}
       a:first-child::before {
-        content: "|";
+        content: "";
         font-weight: bolder;
-        margin-right: .5rem;
-        color: $single-link-color;
-
+        position: absolute;
+		height: 11px;
+		width: 3px;
+		border-radius: 2px;
+		left: 1px;
+		top:50%;
+		margin-top: -5px;
+		background-color: $single-link-color;
         [theme=dark] & {
-          color: $single-link-color-dark;
+          background-color: $single-link-color-dark;
         }
         [theme=black] & {
-          color: $single-link-color-black;
+          background-color: $single-link-color-black;
         }
       }
 	

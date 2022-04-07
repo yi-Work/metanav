@@ -47,6 +47,7 @@
 	}
 	.msgbox,.msgbox a{
 		color: $zdy_color5;
+		font-size: 14px;
 	}
 	.msgbox a:hover {
 	  color: $global-link-hover-color;
@@ -60,7 +61,7 @@
 		}
 	}
 	.featured-image{
-		margin-top: 30px;
+		margin-top: 0.8rem;
 	}
 	.content{
 		font-size: 14px;

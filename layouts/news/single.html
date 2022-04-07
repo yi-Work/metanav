@@ -180,7 +180,7 @@
 				<div class="articlecataloguebox" ><!-- id="toc-static" -->
 				<div class="details toc open"  kept="{{ if $toc.keepStatic }}true{{ end }}">
 					<div class="details-summary toc-title">
-						<span>{{ T "contents" }}</span>
+						<span>{{ T `wzml` }}</span>
 					</div>
 					<div class="details-content toc-content" id="toc-content-static">
 						{{- dict "Content" .TableOfContents "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
