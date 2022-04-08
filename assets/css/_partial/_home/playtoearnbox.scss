@@ -29,7 +29,7 @@
 			color: $zdy_color1;
 			@include box(vertical);
 			-webkit-line-clamp: 1;
-			font-size: 13px;
+			font-size: 12px;
 		}
 		.gtypesbox a{
 			font-size: 13px;
@@ -69,11 +69,11 @@
 		}
 		
 		.featured-image-preview {
-		 width: 80px;
-		 height: 80px;
+		 width: 90px;
+		 height: 90px;
 		  overflow: hidden;
 		  position: relative;
-		  border-radius: $border-radius-size20;
+		  border-radius: $border-radius-size15;
 		  @include transition(transform 0.4s ease);
 		
 		  img {
@@ -100,6 +100,7 @@
 			flex: 1;
 			-webkit-flex: 1;
 			.single-title{
+				padding-top: 6px;
 				margin: 0;
 				font-size: 15px;
 				font-weight: bold;
