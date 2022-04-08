@@ -22,15 +22,15 @@ hasCJKLanguage = true
 	#  页面头部导航栏标题配置
 		[zh-cn.header.title]
 		# LOGO 的 URL
-		logo = ""
+		logo = "/images/logo.png"
 		# 标题名称
-		name = "元宇宙导航"
+		name = ""
 		# 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
 		pre = ""
 		# 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
 		post = ""
 		#  是否为标题显示打字机动画
-		typeit = true
+		typeit = false
 	# 主页配置
 	[zh-cn.params]
 		#languageISO = "zh-CN"
@@ -87,15 +87,15 @@ hasCJKLanguage = true
 	#  页面头部导航栏标题配置
 		[en.header.title]
 		# LOGO 的 URL
-		logo = ""
+		logo = "/images/logo.png"
 		# 标题名称
-		name = "MetaNav"
+		name = ""
 		# 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
 		pre = ""
 		# 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
 		post = ""
 		#  是否为标题显示打字机动画
-		typeit = true
+		typeit = false
 	# 主页配置
 	[en.params]
 		#languageISO = "EN"

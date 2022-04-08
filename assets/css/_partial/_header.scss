@@ -206,6 +206,9 @@ header {
 		margin: 0 auto;
 		.header-title {
 		  font-size: $header-title-font-size;
+		  a{
+			  display: block;
+		  }
 		}
 
 		.menu {
