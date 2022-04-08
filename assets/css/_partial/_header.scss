@@ -206,8 +206,12 @@ header {
 		margin: 0 auto;
 		.header-title {
 		  font-size: $header-title-font-size;
+		  position: relative;
+		  height: 3.5rem;
 		  a{
-			  display: block;
+			  top: 3px;
+			  left: 0;
+			  position: absolute;
 		  }
 		}
 
