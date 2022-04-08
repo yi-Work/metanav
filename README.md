@@ -195,7 +195,7 @@ description: “"
 link: "https://www.baidu.com/“
 #### 广告类型
 adtype: //只能写其中一种类型
-"1" 横图 广告图 大尺寸 1206/130   小尺寸 1000/234
+"1" 横图 广告图 大尺寸 1206/130   小尺寸 750/130
 adtype: "1"
 长图
  featuredImage: “”

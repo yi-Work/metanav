@@ -38,7 +38,7 @@
 <script type="text/javascript">
 	var Addata = {
 		adbl1:1206/130,//1206/130
-		adbl1_s:1000/234,//1000/234
+		adbl1_s:750/130,//750/130
 		showad1index:null,
 		adbl2:498/1277,//498/1277
 		showad2index:null,
@@ -95,7 +95,7 @@
 			var _this = this;
 			var w = $(window).outerWidth();
 			$(".zdy_pageadbox img").hide()
-			if(w<=600){
+			if(w<=680){
 				var d = $(".zdy_pageadbox .zdy_ad1").eq(_this.showad1index);
 				$(".zdy_pageadbox").css("height",$(".zdy_pageadbox").outerWidth()/_this.adbl1_s)
 				d.find(".simg").attr("src",d.find(".simg").attr("isrc")).show()

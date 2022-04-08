@@ -7,7 +7,7 @@ draft: false
 authors: ["Xiaoyi"]
 description: "https://www.baidu.com/"
 link: "https://www.baidu.com/"
-featuredImage: "3.jpg"
+featuredImage: "1.jpg"
 iid: 1
 
 adtype: "3"
@@ -20,7 +20,7 @@ lightgallery: true
  link 广告链接
  
  adtype: //只能写其中一种类型 (广告具体比例最后和设计确定)
-	"1" 横图 广告图 大尺寸 1206/130   小尺寸 1000/234
+	"1" 横图 广告图 大尺寸 1206/130   小尺寸 750/130
 		长图
 		featuredImage 
 		短图
