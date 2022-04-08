@@ -60,11 +60,11 @@
 			font-weight: bold;
 			[theme=dark] & {
 				box-shadow: $zdy-bordershow-dark;
-				background: $zdy-bg-dark;
+				// background: $zdy-bg-dark;
 			}
 			[theme=black] & {
 				box-shadow: $zdy-bordershow-black;
-				background: $zdy-bg-black;
+				// background: $zdy-bg-black;
 			}
 		}
 		.lmorebtn:hover{
@@ -128,10 +128,14 @@
 				margin: 0 auto;
 				height: 40px;
 				line-height: 40px;
-				border: 2px solid $zdy_color1;
+				border: 2px solid $zdy_btn1_bg;
 				color: $zdy_color1;
 				border-radius: $border-radius-size15;
 				font-weight: bold;
+			}
+			a:hover{
+				border-color:$zdy_btn1_color-hover;
+				color: $zdy_btn1_color-hover;
 			}
 		}
 		li:nth-of-type(1){
