@@ -33,7 +33,12 @@
 		}
 	}
 	.single:hover{
-		box-shadow: $zdy-bordershow-hover;
+		[theme=light] & {
+		 box-shadow: $zdy-bordershow-hover;
+		}
+		[theme=auto] & {
+		  box-shadow: $zdy-bordershow-hover;
+		}
 		.featured-image-preview{
 			@include transform(scale(1.05));
 		}

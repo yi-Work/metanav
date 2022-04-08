@@ -67,7 +67,17 @@
 			  background: $zdy-bg-black;
 			}
 		}
-		
+		.single:hover{
+			[theme=light] & {
+			 box-shadow: $zdy-bordershow-hover;
+			}
+			[theme=auto] & {
+			  box-shadow: $zdy-bordershow-hover;
+			}
+			.featured-image-preview{
+				@include transform(scale(1.05));
+			}
+		}
 		.featured-image-preview {
 		 width: 90px;
 		 height: 90px;

@@ -28,8 +28,8 @@ $global-link-color-black: #d9d9d9 !default;
 
 // Color of the hover link
 $global-link-hover-color: #486EFA !default;
-$global-link-hover-color-dark: #fff !default;
-$global-link-hover-color-black: #fff !default;
+$global-link-hover-color-dark: #486EFA !default;
+$global-link-hover-color-black: #486EFA !default;
 
 // Color of the border
 $global-border-color: #f0f0f0 !default;
@@ -526,7 +526,7 @@ $zdy-bg-black:#383b3d;
 // ========== 按钮 ========== //
 $zdy_btn1_bg:#486EFA;
 $zdy_btn1_color:#fff;
-
+$zdy_btn1_color-hover:#6d8bfb;
 $zdy-bordershow:0px 0px 12px 3px #E8EAEE;
 $zdy-bordershow-hover: 0px 0px 21px 4px #DDDFE1;
 
