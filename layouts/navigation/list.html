@@ -33,7 +33,8 @@
 								<use xlink:href="#icon-wenzhang"></use>
 							</svg>
 						</span>{{.Title}}</p>
-						<div class="smnav">
+						
+						<!-- <div class="smnav">
 							{{ $.Scratch.Set "thisnav" .Params.navigation }}
 							{{ range $key, $value := $.Scratch.Get "thisnav" }}
 								{{ if eq $key 0}}
@@ -42,10 +43,37 @@
 								<a type="{{$value}}" href="{{ printf "%s/%s" "navigation" $value | urlize | relLangURL }}/">{{$value}}</a>
 							{{ end }}
 							
-						</div>
-						<a class="morebtn" href="{{ $.Scratch.Get "gg"}}">{{ T `more`}} ></a>
+						</div> -->
+						<!-- <a class="morebtn" href="{{ $.Scratch.Get "gg"}}">{{ T `more`}} ></a> -->
 					</div>
-					<div class="conulbox">
+					<div class="smconbox">
+						{{- $opages := where .Site.RegularPages "Params.navigation" "intersect" .Params.navigation -}}
+						{{- $navigation := .Site.Params.list.navigation -}}
+						{{ $.Scratch.Set "thisnav" .Params.navigation }}
+						{{ range $key, $value := $.Scratch.Get "thisnav" }}
+							{{ if eq $key 0}}
+							{{ $.Scratch.Set "gg" (printf "%s/%s" "navigation" $value | urlize | relLangURL)  }}
+							{{ end }}
+							<div class="smcontit"><span>
+								<svg class="icon" aria-hidden="true">
+									<use xlink:href="#icon-wenzhang"></use>
+								</svg>
+							</span>{{$value}}<a class="morebtn" href="{{ $.Scratch.Get "gg"}}">{{ T `more`}} ></a></div>
+							<div class="conulbox">
+								{{- $opages := where $opages "Params.navigation" "intersect"  (slice $value) -}}
+								{{- $opages := where $opages "Params.hidePage" "!=" true -}}
+								{{ range $elem_index, $elem_val := $opages }}
+									{{ if lt $elem_index $navigation.paginate}}
+									<div class="zdy_navslistli">
+									{{- .Render "summary" -}}
+									</div>
+									{{ end }}
+								{{ end }}
+							</div>
+							<!-- <a type="{{$value}}" href="{{ printf "%s/%s" "navigation" $value | urlize | relLangURL }}/">{{$value}}</a> -->
+						{{ end }}
+					</div>
+					<!-- <div class="conulbox">
 						
 						{{- $pages := where .Site.RegularPages "Params.navigation" "intersect" .Params.navigation -}}
 						{{- $navigation := .Site.Params.list.navigation -}}
@@ -57,7 +85,7 @@
 							</div>
 							{{ end }}
 						{{ end }}
-					</div>
+					</div> -->
 				</div>
 				{{- end -}}
 			
