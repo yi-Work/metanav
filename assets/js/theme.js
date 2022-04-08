@@ -93,6 +93,16 @@ function setColorTheme (theme) {
   window.localStorage && localStorage.setItem('theme', theme)
   // set window.isDark for js
   window.isDark = !(theme === 'light')
+  var currentTheme = document.body.getAttribute('theme')
+  var img1 = document.getElementsByClassName("logo1")[0];
+  var img2 = document.getElementsByClassName("logo2")[0];
+  if (currentTheme === 'dark'||currentTheme === 'black') {
+    img1.style.display = 'none'
+	img2.style.display = ''
+  }else {
+    img2.style.display = 'none'
+	img1.style.display = ''
+  }
 }
 
 /**

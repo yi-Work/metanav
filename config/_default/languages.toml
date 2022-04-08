@@ -23,6 +23,7 @@ hasCJKLanguage = true
 		[zh-cn.header.title]
 		# LOGO 的 URL
 		logo = "/images/logo.png"
+		logo1 = "/images/logo1.png"
 		# 标题名称
 		name = ""
 		# 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
@@ -88,6 +89,7 @@ hasCJKLanguage = true
 		[en.header.title]
 		# LOGO 的 URL
 		logo = "/images/logo.png"
+		logo1 = "/images/logo1.png"
 		# 标题名称
 		name = ""
 		# 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
