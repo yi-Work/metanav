@@ -623,7 +623,8 @@ relativeUrls = true
 	games = "games"
 	#导航分类-标签都必须是导航分类相关
 	navigation = "navigation"
-	
+	#社区分类-标签都必须是社区分类相关
+	community = "community"
 	#广告
 	adtype = "adtype"
 	adshow = "adshow"
