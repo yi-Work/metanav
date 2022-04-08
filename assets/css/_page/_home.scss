@@ -211,7 +211,7 @@
 					border: 1px solid #6E7177;
 					height: 100%;
 					width: 354px;
-					border-radius: 10px;
+					border-radius: $border-radius-size15;
 				}
 				.inputbox p input{
 					border:none;
@@ -230,7 +230,7 @@
 					height: 100%;
 					text-align: center;
 					cursor: pointer;
-					border-radius: 10px;
+					border-radius: $border-radius-size15
 				}
 			}
 		}
