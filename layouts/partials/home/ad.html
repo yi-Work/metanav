@@ -118,9 +118,9 @@
  			$(".zdy_homeadbox img").hide()
  			if(w<=600){
 				$(".zdy_homeadbox").each(function(){
-					$(this).css("height",$("zdy_homeadbox").outerWidth()/_this.adbl1_s)
+					$(this).css("height",$(".zdy_homeadbox").outerWidth()/_this.adbl1_s)
 					$(this).find(".simg").attr("src",$(this).find(".simg").attr("isrc")).show()
-					if(!$(this).find(".limg").attr("src")){
+					if(!$(this).find(".simg").attr("src")){
 						$(this).hide()
 					}
 				})
