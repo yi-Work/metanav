@@ -252,3 +252,6 @@ other = "community"
 other = "activities"
 [famland-metaverse]
 other = "metaverse"
+
+[socialscore]
+other = "Social Score"

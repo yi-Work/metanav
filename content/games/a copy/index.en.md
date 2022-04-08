@@ -19,4 +19,5 @@ pinned: false
 
 recommend: false
 recommend1: false
+score: "7"
 ---

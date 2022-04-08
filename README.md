@@ -131,10 +131,11 @@ blockchain: ["Ethereum","Polygon"]
 game_screen: ["featured-image.webp"]
 #### Supported NFTs
 supported_ntfs: [{"img":"featured-image.webp","link":"#","title":"Cyborg Legends"}]
+#### Social Score
+score: "7"
 
 lightgallery: true
 toc: true
-score: "7"
 status: "Live"
 
 ## 社区community
