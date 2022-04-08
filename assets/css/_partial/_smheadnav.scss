@@ -6,7 +6,13 @@
 	z-index: 5;
 	top: 56px;
 	padding: 25px 0 12px;
-	border-bottom: 1px solid $gangbg;
+	border-bottom: 1px solid $gangbg-dark;
+	[theme=auto] & {
+		border-bottom: 1px solid $gangbg;
+	}
+	[theme=light] & {
+		border-bottom: 1px solid $gangbg;
+	}
 	display: flex;
 	display: -webkit-flex;
 	height: 32px;
@@ -158,7 +164,13 @@
 		top: 69px;
 		
 		.dropdown-menu{
-			border:1px solid $gangbg;
+			border:1px solid $gangbg-dark;
+			[theme=auto] & {
+				border: 1px solid $gangbg;
+			}
+			[theme=light] & {
+				border: 1px solid $gangbg;
+			}
 			.dataset-search .suggestions{
 				max-height: 300px;
 			}

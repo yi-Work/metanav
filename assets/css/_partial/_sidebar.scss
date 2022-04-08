@@ -38,11 +38,16 @@
 		color: $zdy_color5;
 	}
 	.tit{
-		font-size: 16px;
+		font-size: 14px;
 		font-weight: bold;
 	}
 	.tit:hover{
-		color: $global-font-color;
+		[theme=auto] & {
+			color: $global-font-color;
+		}
+		[theme=light] & {
+			color: $global-font-color;
+		}
 	}
 	a{
 		padding-left: 20px;

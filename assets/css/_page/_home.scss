@@ -106,7 +106,12 @@
 				width: 90%;
 				margin: 0 auto;
 				padding: 60px 0 0;
-				color: $zdy_color2;
+				[theme=light] & {
+					color: $zdy_color2;
+				}
+				[theme=auto] & {
+					color: $zdy_color2;
+				}
 			}
 			.b_ab{
 				position: absolute;

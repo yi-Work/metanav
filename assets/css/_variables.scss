@@ -19,11 +19,11 @@ $global-background-color-black: #000000 !default;
 // Color of the secondary text
 $global-font-secondary-color: #4d4d4d !default;
 $global-font-secondary-color-dark: #b5b5b5 !default;
-$global-font-secondary-color-black: #a9a9b3 !default;
+$global-font-secondary-color-black: #a4a5a8 !default;
 
 // Color of the link
-$global-link-color: #161209 !default;
-$global-link-color-dark: #a9a9b3 !default;
+$global-link-color: #071A3B !default;
+$global-link-color-dark: #a4a5a8 !default;
 $global-link-color-black: #d9d9d9 !default;
 
 // Color of the hover link
@@ -45,7 +45,7 @@ $custom-scrollbar-height: .5rem;
 // Color of the scrollbar
 $custom-scrollbar-color: #87878d !default;
 // Color of the hover scrollbar
-$custom-scrollbar-hover-color: #a9a9b3 !default;
+$custom-scrollbar-hover-color: #a4a5a8 !default;
 // ========== Scrollbar ========== //
 
 // ========== Selection ========== //
@@ -107,8 +107,8 @@ $blockquote-color-black: #59c5ec !default;
 // ========== Pagination ========== //
 // Color of the link in pagination
 $pagination-link-color: #486EFA !default;
-$pagination-link-color-dark: #a9a9b3 !default;
-$pagination-link-color-black: #a9a9b3 !default;
+$pagination-link-color-dark: #a4a5a8 !default;
+$pagination-link-color-black: #a4a5a8 !default;
 
 // Color of the hover link in pagination
 $pagination-link-hover-color: #000 !default;
@@ -192,7 +192,7 @@ $code-type-map: (
 
 // Color map of the code highlight
 $code-highlight-color-map: (
-  /* Parentheses */ 'p': #a9a9b3,
+  /* Parentheses */ 'p': #a4a5a8,
   /* Keyword */ 'k': #b501a9,
   /* KeywordConstant */ 'kc': #b501a9,
   /* KeywordDeclaration */ 'kd': #b501a9,
@@ -267,7 +267,7 @@ $code-highlight-color-map: (
   /* TextWhitespace */ 'w': #bbbbbb,
 ) !default;
 $code-highlight-color-map-dark: (
-  /* Parentheses */ 'p': #a9a9b3,
+  /* Parentheses */ 'p': #a4a5a8,
   /* Keyword */ 'k': #d371e3,
   /* KeywordConstant */ 'kc': #d371e3,
   /* KeywordDeclaration */ 'kd': #d371e3,
@@ -288,7 +288,7 @@ $code-highlight-color-map-dark: (
   /* NameFunctionMagic */ 'fm': #19b9c4,
   /* NameLabel */ 'nl': #41b0f5,
   /* NameNamespace */ 'nn': #41b0f5,
-  /* NameOther */ 'nx': #a9a9b3,
+  /* NameOther */ 'nx': #a4a5a8,
   /* NameProperty */ 'py': #41b0f5,
   /* NameTag */ 'nt': #41b0f5,
   /* NameVariable */ 'nv': #41b0f5,
@@ -342,7 +342,7 @@ $code-highlight-color-map-dark: (
   /* TextWhitespace */ 'w': #bbbbbb,
 ) !default;
 $code-highlight-color-map-black: (
-  /* Parentheses */ 'p': #a9a9b3,
+  /* Parentheses */ 'p': #a4a5a8,
   /* Keyword */ 'k': #d371e3,
   /* KeywordConstant */ 'kc': #d371e3,
   /* KeywordDeclaration */ 'kd': #d371e3,
@@ -363,7 +363,7 @@ $code-highlight-color-map-black: (
   /* NameFunctionMagic */ 'fm': #19b9c4,
   /* NameLabel */ 'nl': #41b0f5,
   /* NameNamespace */ 'nn': #41b0f5,
-  /* NameOther */ 'nx': #a9a9b3,
+  /* NameOther */ 'nx': #a4a5a8,
   /* NameProperty */ 'py': #41b0f5,
   /* NameTag */ 'nt': #41b0f5,
   /* NameVariable */ 'nv': #41b0f5,
@@ -462,7 +462,7 @@ $friend-link-background-color-black: #111111 !default;
 
 // Color of friend link text
 $friend-link-color: #486EFA !default;
-$friend-link-color-dark: #a9a9b3 !default;
+$friend-link-color-dark: #a4a5a8 !default;
 $friend-link-color-black: #d9d9d9 !default;
 
 // Color of hover friend link text
@@ -487,11 +487,11 @@ $friend-link-hover-color-black: #ffffff !default;
 
 // Color of the text
 $global-font-color: #071A3B !default;
-$global-font-color-dark: #a9a9b3 !default;
+$global-font-color-dark: #a4a5a8 !default;
 $global-font-color-black: #d9d9d9 !default;
 // Color of the link
 $global-link-color: #071A3B !default;
-$global-link-color-dark: #a9a9b3 !default;
+$global-link-color-dark: #a4a5a8 !default;
 $global-link-color-black: #d9d9d9 !default;
 // Color of the header background
 $header-background-color: #fff !default;
@@ -518,7 +518,11 @@ $zdy_color11:#4BB89B;
 $zdy_fontcolor1:#fff;
 
 $gangbg:#DFE4E9;
+$gangbg-dark:#a4a5a8;
 $zdy_bg:#F6F8FA;
+$zdy-bg1:#fff;
+$zdy-bg-dark:#383b3d;
+$zdy-bg-black:#383b3d;
 // ========== 按钮 ========== //
 $zdy_btn1_bg:#486EFA;
 $zdy_btn1_color:#fff;
@@ -527,10 +531,9 @@ $zdy-bordershow:0px 0px 12px 3px #E8EAEE;
 $zdy-bordershow-hover: 0px 0px 21px 4px #DDDFE1;
 
 $zdy-bordershow-dark:0px 0px 10px 0px #191919;
-$zdy-bg-dark:none;
+
 $zdy-bordershow-black:none;
-$zdy-bg-black:#191919;
-$zdy-bg1:#fff;
+
 // $home-k-bgc:#fff;
 $zdy-bordershow1:0px 0px 8px 0px #E8EAEE;
 $border-radius-size20:20px;

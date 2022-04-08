@@ -23,13 +23,16 @@
 .communitylist_conbox,
 .tagslist_conbox{
 	.pagelistcon{
-			  [theme=light] & {
-			    background: #fff;
-			  }
-			  [theme=auto] & {
-			    background: #fff;
-			  }
+			  background: $zdy-bg1;
 			  box-shadow: $zdy-bordershow1;
+			  [theme=dark] & {
+			    box-shadow: $zdy-bordershow-dark;
+				 background: $zdy-bg-dark;
+			  }
+			  [theme=black] & {
+			    box-shadow: $zdy-bordershow-black;
+				 background: $zdy-bg-dark;
+			  }
 			  margin-bottom: 20px;
 			  border-radius: 20px;
 			  flex: 1;
@@ -46,7 +49,16 @@
 	}
 	.zdy_newslistli{
 			  padding: 32px 0;
-			  border-bottom: 1px solid $gangbg;
+			  border-bottom: 1px solid $gangbg-dark;
+			  [theme=auto] & {
+			  	border-bottom: 1px solid $gangbg;
+			  }
+			  [theme=light] & {
+			  	border-bottom: 1px solid $gangbg;
+			  }
+	}
+	.zdy_newslistli:last-child{
+		border-bottom: none;
 	}
 	.summary{
 		display: flex;
@@ -70,21 +82,30 @@
 		.zdy_rightbox{
 			flex: 1;
 			-webkit-flex: 1;
+			display: flex;
+			display: -webkit-flex;
+			flex-direction: column;
+			justify-content: center;
 			padding-left: 14px;
 			.single-title{
 				overflow: hidden;
 				width: 100%;
-				height: 28px;
+				max-height: 56px;
 				text-align: left;
 				font-size: 18px;
 				font-weight: bold;
 				line-height: 28px;
 				margin: 0;
 				@include box(vertical);
-					-webkit-line-clamp: 1;
+					-webkit-line-clamp: 2;
 				}
 				.content{
-					color: $zdy_color2;
+					[theme=auto] & {
+						color: $zdy_color2;
+					}
+					[theme=light] & {
+						color: $zdy_color2;
+					}
 					font-size: 14px;
 					line-height: 22px;
 					height: 44px;
@@ -99,7 +120,7 @@
 				font-size: 13px;
 				color: $zdy_color6;
 				line-height: 24px;
-				padding: 22px 0;
+				padding: 3px 0 10px;
 				a{
 					color: $zdy_color6;
 				}
@@ -198,9 +219,18 @@
 		-webkit-box-sizing: border-box;
 		
 		.summary{
-			background: #FFFFFF;
 			border-radius: 15px 15px 15px 15px;
 			box-shadow: 0px 0px 8px 0px #E8EAEE;
+			box-shadow:$zdy-bordershow1;
+			background: $zdy-bg1;
+			[theme=dark] & {
+			  box-shadow: $zdy-bordershow-dark;
+			  background: $zdy-bg-dark;
+			}
+			[theme=black] & {
+			  box-shadow: $zdy-bordershow-black;
+			  background: $zdy-bg-black;
+			}
 		}
 		.summary a{
 			padding: 12px;
@@ -250,13 +280,16 @@
 .gameslist_conbox,
 .tagslist_conbox{
 	.pagelistcon{
-			  [theme=light] & {
-			    background: #fff;
-			  }
-			  [theme=auto] & {
-			    background: #fff;
-			  }
 			  box-shadow: $zdy-bordershow1;
+			  background: $zdy-bg1;
+			  [theme=dark] & {
+			    box-shadow: $zdy-bordershow-dark;
+			    background: $zdy-bg-dark;
+			  }
+			  [theme=black] & {
+			    box-shadow: $zdy-bordershow-black;
+			    background: $zdy-bg-black;
+			  }
 			  margin-bottom: 20px;
 			  border-radius: 20px;
 			  flex: 1;
@@ -287,27 +320,40 @@
 			font-weight: bold;
 			margin: 0;
 			padding: 10px 0;
-			border-bottom: 1px solid $gangbg;
+			border-bottom: 1px solid $gangbg-dark;
+			[theme=auto] & {
+				border-bottom: 1px solid $gangbg;
+			}
+			[theme=light] & {
+				border-bottom: 1px solid $gangbg;
+			}
 		}
 	}
 	.smliconbox{
 		position: relative;
 	}
-	.zdy_gameslistli::after{
-		content: "";
-		position: absolute;
-		width: 100%;
-		height: 1px;
-		background: $gangbg;
-		bottom: 0;
-		left: 0;
-	}
+	// .zdy_gameslistli::after{
+	// 	content: "";
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	height: 1px;
+	// 	background: $gangbg;
+	// 	bottom: 0;
+	// 	left: 0;
+	// }
+	
 	.zdy_gameslistli{
 		float: left;
 		width: 50%;
 		padding: 20px 0;
 		padding-bottom: 21px;
-		border-bottom: 1px solid $gangbg;
+		border-bottom: 1px solid $gangbg-dark;
+		[theme=auto] & {
+			border-bottom: 1px solid $gangbg;
+		}
+		[theme=light] & {
+			border-bottom: 1px solid $gangbg;
+		}
 		.featured-image-preview{
 			width: 96px;
 			height: 96px;
@@ -398,6 +444,20 @@
 				font-size: 13px;
 			}
 		}
+	}
+	.zdy_gameslistli:last-child{
+		border-bottom-color:rgba(0,0,0,0) ;
+	}
+}
+.gameslist_conbox{
+	.sidebarbox_mb .tit{
+		[theme=auto] & {
+			color: $global-font-color;
+		}
+		[theme=light] & {
+			color: $global-font-color;
+		}
+		color: $global-background-color;
 	}
 }
 .tagslist_conbox{

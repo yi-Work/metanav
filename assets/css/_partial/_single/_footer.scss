@@ -7,7 +7,13 @@
 		}
 	}
   .post-info {
-    border-top: 1px solid $gangbg;
+    border-top: 1px solid $gangbg-dark;
+	[theme=auto] & {
+		border-top: 1px solid $gangbg;
+	}
+	[theme=light] & {
+		border-top: 1px solid $gangbg;
+	}
     padding: 0.5rem 0 0.3rem;
 
     [theme=dark] & {
