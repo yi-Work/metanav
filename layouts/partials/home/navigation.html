@@ -3,9 +3,10 @@
 	<div class="box2 clear">
 		<ul>
 			{{ range $elem_index, $elem_val :=where .Site.RegularPages "Type" "pNavigation" }}
-				{{ if lt $elem_index 7}}
+				{{ if lt $elem_index 6}}
 				<li>
-					<h4><span>{{safeHTML .Params.ico}}</span>{{.Title}}</h4>
+					<!-- <h4>{{safeHTML .Params.ico}}{{.Title}}</h4> -->
+					<h4><span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-a-shipinduomeiti2"></use></svg></span>{{.Title}}</h4>
 					<div class="slist" >
 						{{ $.Scratch.Set "navigation" .Params.navigation }}
 						{{ range $key, $value := $.Scratch.Get "navigation" }}
@@ -18,14 +19,15 @@
 		</ul>
 		<ul>
 			{{ range $elem_index, $elem_val :=where .Site.RegularPages "Type" "pNavigation" }}
-				{{ if ge $elem_index 7}}
+				{{ if ge $elem_index 6}}
 				<li>
-					<h4><span>{{safeHTML .Params.ico}}</span>{{.Title}}</h4>
+					<!-- <h4>{{safeHTML .Params.ico}}{{.Title}}</h4> -->
+					<h4><span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-a-shipinduomeiti2"></use></svg></span>{{.Title}}</h4>
 					<div class="slist" >
 						{{ $.Scratch.Set "navigation" .Params.navigation }}
 						{{ range $key, $value := $.Scratch.Get "navigation" }}
 							<a href="{{ printf "%s/%s" "navigation" $value | urlize | relLangURL }}/">{{$value}}</a>
-						{{ end }}
+						{{ end }} 
 					</div>
 				</li>
 				{{end}}

@@ -108,3 +108,10 @@
   object-fit: $value;
   font-family: 'object-fit: #{$value};';
 }
+
+@mixin linear-gradient($value...) {
+  background: linear-gradient($value);
+  background: -moz-linear-gradient($value);
+  background: -webkit-linear-gradient($value);
+  background: -o-linear-gradient($value);
+}

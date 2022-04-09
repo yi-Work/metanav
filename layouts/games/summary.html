@@ -2,32 +2,46 @@
 
 <article class="single summary" itemscope itemtype="http://schema.org/Article">
     {{- /* Featured image */ -}}
-    {{- $image := $params.featuredImagePreview | default $params.featuredImage -}}
-    {{- $height := "auto" -}}
-    {{- $width := "auto" -}}
-    {{- with .Resources.GetMatch (printf "%s" ($image)) -}}
-        {{- $image = .RelPermalink -}}
-        {{- $height = .Height -}}
-        {{- $width = .Width -}}
-    {{- end -}}
-    {{- with .Resources.GetMatch "featured-image" -}}
-        {{- $image = .RelPermalink -}}
-        {{- $height = .Height -}}
-        {{- $width = .Width -}}
-    {{- end -}}
-    {{- with .Resources.GetMatch "featured-image-preview" -}}
-        {{- $image = .RelPermalink -}}
-        {{- $height = .Height -}}
-        {{- $width = .Width -}}
-    {{- end -}}
-        {{- with $image -}}
-        <div class="featured-image-preview">
-            <a href="{{ $.RelPermalink }}" aria-label={{ $.Title }}>
-                {{- dict "Src" . "Title" $.Description "Resources" $.Resources "Height" $height "Width" $width | partial "plugin/image.html" -}}
-            </a>
-        </div>
-    {{- end -}}
-
+	{{ if reflect.IsSlice $params.featuredImage }}
+		{{ range $elem_val :=first 1 $params.featuredImage }}
+			{{- $image := $params.featuredImagePreview | default $elem_val -}}
+			{{- $height := "auto" -}}
+			{{- $width := "auto" -}}
+			{{- with $image -}}
+			<div class="featured-image-preview">
+				<a href="{{ $.RelPermalink }}" aria-label={{ $.Title }}>
+					{{- dict "Src" . "Title" $.Description "Resources" $.Resources "Height" $height "Width" $width | partial "plugin/image.html" -}}
+				</a>
+			</div>
+			{{- end -}}
+		{{ end }}
+	{{else}}
+		{{- $image := $params.featuredImagePreview | default $params.featuredImage -}}
+		{{- $height := "auto" -}}
+		{{- $width := "auto" -}}
+		{{- with .Resources.GetMatch (printf "%s" ($image)) -}}
+			{{- $image = .RelPermalink -}}
+			{{- $height = .Height -}}
+			{{- $width = .Width -}}
+		{{- end -}}
+		{{- with .Resources.GetMatch "featured-image" -}}
+			{{- $image = .RelPermalink -}}
+			{{- $height = .Height -}}
+			{{- $width = .Width -}}
+		{{- end -}}
+		{{- with .Resources.GetMatch "featured-image-preview" -}}
+			{{- $image = .RelPermalink -}}
+			{{- $height = .Height -}}
+			{{- $width = .Width -}}
+		{{- end -}}
+			{{- with $image -}}
+			<div class="featured-image-preview">
+				<a href="{{ $.RelPermalink }}" aria-label={{ $.Title }}>
+					{{- dict "Src" . "Title" $.Description "Resources" $.Resources "Height" $height "Width" $width | partial "plugin/image.html" -}}
+				</a>
+			</div>
+		{{- end -}}
+	{{- end -}}
 	<div class="zdy_rightbox">
 		{{- /* Title */ -}}
 		<h1 class="single-title" itemprop="name headline">

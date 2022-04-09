@@ -480,7 +480,16 @@
 }
 .tagslist_conbox{
 	.zdy_navslistli,
-	.zdy_newslistli{
+	.zdy_newslistli,
+	.zdy_communitylistli{
+		.summary:hover{
+			transform: none;
+			-webkit-transform: none;
+			-moz-transform: none;
+			box-shadow: none;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+		}
 		width: 100%;
 		float: none;
 		padding: 20px 0;
@@ -512,6 +521,7 @@
 			}
 			a{
 				padding: 0;
+				box-shadow:none;
 			}
 		}
 		.zdy_rightbox{

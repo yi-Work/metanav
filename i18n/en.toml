@@ -210,7 +210,7 @@ other = "prev"
 other = "next"
 
 [more]
-other = "more"
+other = "More"
 
 [navtext1]
 other = "Cumulative access"
