@@ -28,11 +28,7 @@
 				{{- range $elem_index, $elem_val :=where .Site.RegularPages "Type" $thistypes -}}
 				<div class="conli">
 					<div class="topnav">
-						<p class="tit"><span>
-							<svg class="icon" aria-hidden="true">
-								<use xlink:href="#icon-wenzhang"></use>
-							</svg>
-						</span>{{.Title}}</p>
+						<p class="tit"><span>{{safeHTML .Params.ico}}</span>{{.Title}}</p>
 						
 						<!-- <div class="smnav">
 							{{ $.Scratch.Set "thisnav" .Params.navigation }}
@@ -54,11 +50,11 @@
 							{{ if eq $key 0}}
 							{{ $.Scratch.Set "gg" (printf "%s/%s" "navigation" $value | urlize | relLangURL)  }}
 							{{ end }}
-							<div class="smcontit"><span>
+							<div class="smcontit"><!-- <span>
 								<svg class="icon" aria-hidden="true">
 									<use xlink:href="#icon-wenzhang"></use>
 								</svg>
-							</span>{{$value}}<a class="morebtn" href="{{ $.Scratch.Get "gg"}}">{{ T `more`}} ></a></div>
+							</span> -->{{$value}}<a class="morebtn" href="{{ $.Scratch.Get "gg"}}">{{ T `more`}} ></a></div>
 							<div class="conulbox">
 								{{- $opages := where $opages "Params.navigation" "intersect"  (slice $value) -}}
 								{{- $opages := where $opages "Params.hidePage" "!=" true -}}
@@ -90,12 +86,12 @@
 				{{- end -}}
 			
 		{{ else}}
-			<div class="topnav clear">
-				<p class="tit"><span>
+			<div class="topnav topnav1 clear">
+				<p class="tit"><!-- <span>
 					<svg class="icon" aria-hidden="true">
 						<use xlink:href="#icon-wenzhang"></use>
 					</svg>
-				</span>{{.Title}}</p>
+				</span> -->{{.Title}}</p>
 			</div>
 			<div class="conulbox">
 			{{- $pages := .Pages -}}

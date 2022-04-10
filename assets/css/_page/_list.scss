@@ -133,6 +133,42 @@
 	.conli{
 		padding-bottom: 15px;
 	}
+	.conli:nth-of-type(1) .tit span{
+		@include linear-gradient(0deg, #486efa 0%, #a881ff 100%);
+	}
+	.conli:nth-of-type(2) .tit span{
+		@include linear-gradient(0deg, #ff8b63 0%, #ffaf59 100%);
+	}
+	.conli:nth-of-type(3) .tit span{
+		@include linear-gradient(0deg, #3bbaff 0%, #2be2fd 100%);
+	}
+	.conli:nth-of-type(4) .tit span{
+		@include linear-gradient(0deg, #ffaf01 0%, #ffda00 100%);
+	}
+	.conli:nth-of-type(5) .tit span{
+		@include linear-gradient(0deg, #d878fc 0%, #fb95ef 100%);
+	}
+	.conli:nth-of-type(6) .tit span{
+		@include linear-gradient(0deg, #28d3b0 0%, #59e496 100%);
+	}
+	.conli:nth-of-type(7) .tit span{
+		@include linear-gradient(0deg, #ffaf01 0%, #ffda00 100%);
+	}
+	.conli:nth-of-type(8) .tit span{
+		@include linear-gradient(0deg, #3bbaff 0%, #2be2fd 100%);
+	}
+	.conli:nth-of-type(9) .tit span{
+		@include linear-gradient(0deg, #28d3b0 0%, #59e496 100%);
+	}
+	.conli:nth-of-type(10) .tit span{
+		@include linear-gradient(0deg, #d878fc 0%, #fb95ef 100%);
+	}
+	.conli:nth-of-type(11) .tit span{
+		@include linear-gradient(0deg, #ff8b63 0%, #ffaf59 100%);
+	}
+	.conli:nth-of-type(12) .tit span{
+		@include linear-gradient(0deg, #486efa 0%, #a881ff 100%);
+	}
 	.pagelistcon{
 			  
 			  margin-bottom: 20px;
@@ -153,6 +189,19 @@
 			font-weight: bold;
 			white-space:nowrap;
 			padding-right: 5px;
+			span{
+				// padding-right: 5px;
+				// color: #fff;
+				
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				line-height: 24px;
+				text-align: center;
+				color: #fff;
+				border-radius: 50%;
+				margin-right: 10px;
+			}
 		}
 		.smnav{
 			flex: 1;
@@ -204,6 +253,9 @@
 		    color: $global-link-hover-color;
 		  }
 		}
+	}
+	.topnav1{
+		margin: 1.5rem 0 1rem;
 	}
 	.smconbox{
 		.smcontit{
