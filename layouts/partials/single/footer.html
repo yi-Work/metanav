@@ -79,7 +79,12 @@
             <div class="post-info-md">
 				<section class="post-tags">
 				    {{- with .Params.tags -}}
-				        <i class="fas fa-tags fa-fw"></i>&nbsp;
+				        <!-- <i class="fas fa-tags fa-fw"></i>&nbsp; -->
+						<span style="font-size: 17px;">
+							<svg class="icon" aria-hidden="true">
+								<use xlink:href="#icon-biaoqianleibie"></use>
+							</svg>
+						</span>
 				        {{- range $index, $value := . -}}
 				            {{- if gt $index 0 }},&nbsp;{{ end -}}
 				            {{- $tag := partialCached "function/path.html" $value $value | printf "/tags/%v" | $.Site.GetPage -}}

@@ -10,9 +10,11 @@
 	.active .conlist{
 		display: block;
 	}
-	.active .tit span,
-	.active .tit .fa-chevron-right{
-		transform: rotate(90deg);
+	.tit span{
+		@include transform(rotate(-90deg));
+	}
+	.active .tit span{
+		@include transform(rotate(0deg));
 	}
 	.ntit{
 		margin-bottom: 10px;

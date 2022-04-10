@@ -28,13 +28,18 @@
 				<span class="post-author">
 				    {{- partial "meta/author.html" . }}
 				</span>
+				<span>
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-guanjianci1"></use>
+					</svg>
+				</span>
 				{{- range .Params.news -}}
 					{{- $news := partialCached "function/path.html" . . | printf "/news/%v" | $.Site.GetPage -}}
-					<a href="{{$news.RelPermalink}}"><i class="far fa-folder fa-fw"></i>{{$news.Title}}</a>
+					<a href="{{$news.RelPermalink}}">{{$news.Title}}</a>
 				{{- end -}}
 				{{- with .Site.Params.dateformat | default "2006-01-02" | .PublishDate.Format -}}
 				<div class="time">
-				    <i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>&nbsp;
+				    <!-- <i class="far fa-calendar-alt fa-fw"></i>&nbsp; --><time datetime="{{ . }}">{{ . }}</time>&nbsp;
 				</div>
 				{{- end -}}
 			</div>

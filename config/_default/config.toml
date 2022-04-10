@@ -179,7 +179,7 @@ relativeUrls = true
   #  文章页面配置
   [params.page]
     #  是否显示提交新内容
-	submitnewcontent = false
+	submitnewcontent = true
     #  是否在主页隐藏一篇文章
     hiddenFromHomePage = false
     #  是否在搜索结果中隐藏一篇文章
@@ -260,10 +260,11 @@ relativeUrls = true
       enable = true
       Twitter = true
       Facebook = true
-	  Yutube = true
-	  Weixin = true
+	  Weibo = true
+	  Whatsapp = true
+	  Line = true
+	  
       Linkedin = false
-      Whatsapp = false
       Pinterest = false
       Tumblr = false
       HackerNews = false
@@ -271,13 +272,12 @@ relativeUrls = true
       VK = false
       Buffer = false
       Xing = false
-      Line = false
+      
       Instapaper = false
       Pocket = false
       Digg = false
       Stumbleupon = false
       Flipboard = false
-      Weibo = false
       Renren = false
       Myspace = false
       Blogger = false

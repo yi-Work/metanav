@@ -5,8 +5,7 @@
 			{{ range $elem_index, $elem_val :=where .Site.RegularPages "Type" "pNavigation" }}
 				{{ if lt $elem_index 6}}
 				<li>
-					<!-- <h4>{{safeHTML .Params.ico}}{{.Title}}</h4> -->
-					<h4><span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-a-shipinduomeiti2"></use></svg></span>{{.Title}}</h4>
+					<h4><span>{{safeHTML .Params.ico}}</span>{{.Title}}</h4>
 					<div class="slist" >
 						{{ $.Scratch.Set "navigation" .Params.navigation }}
 						{{ range $key, $value := $.Scratch.Get "navigation" }}
@@ -22,7 +21,7 @@
 				{{ if ge $elem_index 6}}
 				<li>
 					<!-- <h4>{{safeHTML .Params.ico}}{{.Title}}</h4> -->
-					<h4><span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-a-shipinduomeiti2"></use></svg></span>{{.Title}}</h4>
+					<h4><span>{{safeHTML .Params.ico}}</span>{{.Title}}</h4>
 					<div class="slist" >
 						{{ $.Scratch.Set "navigation" .Params.navigation }}
 						{{ range $key, $value := $.Scratch.Get "navigation" }}

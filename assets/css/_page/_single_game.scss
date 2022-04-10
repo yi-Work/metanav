@@ -274,7 +274,7 @@
 				width: 26px;
 			}
 			background: $global-background-color;
-			box-shadow: 0px 0px 8px 0px $zdy-bordershow1;
+			box-shadow: $zdy-bordershow1;
 			[theme=dark] & {
 			  background: $global-font-secondary-color-dark;
 			}
@@ -283,6 +283,10 @@
 			}
 		}
 	}
+	.socialcontactbox,
+	.gamescreenbox{
+		padding: 0 2px;
+	}
 	.gamescreenbox{
 		.zcon{
 			padding: 24px 20px;
@@ -290,7 +294,7 @@
 			margin-bottom: 10px;
 			position: relative;
 			background: $global-background-color;
-			box-shadow: 0px 0px 8px 0px $zdy-bordershow1;
+			box-shadow: $zdy-bordershow1;
 			[theme=dark] & {
 			  background: $global-font-secondary-color-dark;
 			}

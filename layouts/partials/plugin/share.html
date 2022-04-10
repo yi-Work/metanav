@@ -4,14 +4,16 @@
     {{- /* 001: Twitter */ -}}
     {{- if $share.Twitter -}}
         <a href="#" onclick="return false;" title="{{ T `shareOn` }} Twitter" data-sharer="twitter" data-url="{{ .Permalink }}" data-title="{{ .Title }}"{{ with .Site.Params.Social.Twitter }} data-via="{{ . }}"{{ end }}{{ with .Params.tags }} data-hashtags="{{ delimit . `,` }}"{{ end }}>
-            {{- dict "Class" "fab fa-twitter fa-fw" | partial "plugin/icon.html" -}}
+            <!-- {{- dict "Class" "fab fa-twitter fa-fw" | partial "plugin/icon.html" -}} -->
+			{{- dict "Fonts" "#icon-tuite" | partial "plugin/zdyicon.html" -}}
         </a>
     {{- end -}}
 
     {{- /* 002: Facebook */ -}}
     {{- if $share.Facebook -}}
         <a href="#" onclick="return false;" title="{{ T `shareOn` }} Facebook" data-sharer="facebook" data-url="{{ .Permalink }}"{{ with .Params.tags }} data-hashtag="{{ index . 0 }}"{{ end }}>
-            {{- dict "Class" "fab fa-facebook-square fa-fw" | partial "plugin/icon.html" -}}
+            <!-- {{- dict "Class" "fab fa-facebook-square fa-fw" | partial "plugin/icon.html" -}} -->
+			{{- dict "Fonts" "#icon-facebook" | partial "plugin/zdyicon.html" -}}
         </a>
     {{- end -}}
 
@@ -25,7 +27,8 @@
     {{- /* 004: WhatsApp */ -}}
     {{- if $share.Whatsapp -}}
         <a href="#" onclick="return false;" title="{{ T `shareOn` }} WhatsApp" data-sharer="whatsapp" data-url="{{ .Permalink }}" data-title="{{ .Title }}" data-web>
-            {{- dict "Class" "fab fa-whatsapp fa-fw" | partial "plugin/icon.html" -}}
+            <!-- {{- dict "Class" "fab fa-whatsapp fa-fw" | partial "plugin/icon.html" -}} -->
+			{{- dict "Fonts" "#icon-whatsapp" | partial "plugin/zdyicon.html" -}}
         </a>
     {{- end -}}
 
@@ -88,8 +91,9 @@
     {{- /* 013: Line */ -}}
     {{- if $share.Line -}}
         <a href="#" onclick="return false;" title="{{ T `shareOn` }} Line" data-sharer="line" data-url="{{ .Permalink }}" data-title="{{ .Title }}">
-            {{- dict "Simpleicons" "line" "Prefix" (.Scratch.Get "cdn" | default dict).simpleIconsPrefix | partial "plugin/icon.html" -}}
-        </a>
+            <!-- {{- dict "Simpleicons" "line" "Prefix" (.Scratch.Get "cdn" | default dict).simpleIconsPrefix | partial "plugin/icon.html" -}} -->
+			{{- dict "Fonts" "#icon-line-" | partial "plugin/zdyicon.html" -}}
+		</a>
     {{- end -}}
 
     {{- /* 014: Instapaper */ -}}
@@ -130,7 +134,8 @@
     {{- /* 019: 微博 */ -}}
     {{- if $share.Weibo -}}
         <a href="#" onclick="return false;" title="{{ T `shareOn` }} 微博" data-sharer="weibo" data-url="{{ .Permalink }}" data-title="{{ .Title }}"{{ with .Params.featuredImage }} data-image="{{ . }}"{{ end }}{{ with .Site.Params.Social.Weibo }} data-ralateuid="{{ . }}"{{ end }}>
-            {{- dict "Class" "fab fa-weibo fa-fw" | partial "plugin/icon.html" -}}
+            <!-- {{- dict "Class" "fab fa-weibo fa-fw" | partial "plugin/icon.html" -}} -->
+			{{- dict "Fonts" "#icon-weibo" | partial "plugin/zdyicon.html" -}}
         </a>
     {{- end -}}
 
@@ -213,13 +218,13 @@
 	    </a>
 	{{- end -}} -->
 	
-	{{- /* 031: Weixin */ -}}
+	<!-- {{- /* 031: Weixin */ -}}
 	{{- if $share.Weixin -}}
 	    <a href="#" onclick="return false;" title="{{ T `shareOn` }} Weixin" data-sharer="" data-url="{{ .Permalink }}" data-title="{{ .Title }}" data-web>
 	        <svg class="icon" aria-hidden="true">
 				<use xlink:href="#icon-weixin1"></use>
 			</svg>
 	    </a>
-	{{- end -}}
+	{{- end -}} -->
 	
 {{- end -}}

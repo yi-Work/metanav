@@ -24,17 +24,17 @@ website: "https://play.0xuniverse.com?utm_source=PlayToEarn.net&utm_medium=organ
 twitter: "https://twitter.com/0xUniverse"
 discord: "https://discordapp.com/invite/R8fwEPC"
 telegram: "https://t.me/OxUniverse"
-github: 
-youtube: 
-twitch: 
+github: "https://t.me/OxUniverse"
+youtube: "https://t.me/OxUniverse"
+twitch: "https://t.me/OxUniverse"
 facebook: "https://www.facebook.com/0xUniverse"
-instagram: 
+instagram: "https://t.me/OxUniverse"
 reddit: "https://www.reddit.com/r/0xUniverse"
-medium: 
-steam: 
-gitbook: 
-googleplay: 
-appstore: 
+medium: "https://t.me/OxUniverse"
+steam: "https://t.me/OxUniverse"
+gitbook: "https://t.me/OxUniverse"
+googleplay: "https://t.me/OxUniverse"
+appstore: "https://t.me/OxUniverse"
 
 score: "7"
 status: "Live"
