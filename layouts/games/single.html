@@ -135,7 +135,7 @@
 			{{- end -}}
 			
 			{{- /* Content */ -}}
-			<div class="content" id="content">
+			<div class="content" id="content conimages" >
 			    {{- /* Outdated Article Reminder */ -}}
 			    {{- partial "single/outdatedArticleReminder.html" . -}}
 			    {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
@@ -173,7 +173,7 @@
 					{{- if $params.twitter -}}
 						<a href="{{$params.twitter}}">
 							<svg class="icon" aria-hidden="true">
-								<use xlink:href="#icon-twitter1"></use>
+								<use xlink:href="#icon-tuite-blue"></use>
 							</svg>
 						</a>
 					{{- end -}}
@@ -187,7 +187,7 @@
 					{{- if $params.telegram -}}
 						<a href="{{$params.telegram}}">
 							<svg class="icon" aria-hidden="true">
-								<use xlink:href="#icon-telegram"></use>
+								<use xlink:href="#icon-telegram-plane"></use>
 							</svg>
 						</a>
 					{{- end -}}
@@ -236,7 +236,7 @@
 					{{- if $params.medium -}}
 						<a href="{{$params.medium}}">
 							<svg class="icon" aria-hidden="true">
-								<use xlink:href="#icon-medium1"></use>
+								<use xlink:href="#icon-medium2"></use>
 							</svg>
 						</a>
 					{{- end -}}
@@ -422,6 +422,8 @@
 	   },
 	 });
 	 var gallery = new Viewer(document.getElementById('images'));
+	 
+	 var gallery1 = new Viewer(document.getElementById('conimages'));
 </script>
 {{- end -}}
 

@@ -24,7 +24,7 @@
 .tagslist_conbox{
 	.pagelistcon{
 			  background: $zdy-bg1;
-			  box-shadow: $zdy-bordershow1;
+			  box-shadow: $zdy-bordershow;
 			  [theme=dark] & {
 			    box-shadow: $zdy-bordershow-dark;
 				 background: $zdy-bg-dark;
@@ -244,7 +244,7 @@
 			padding: 12px;
 			display: flex;
 			display: -webkit-flex;
-			box-shadow:$zdy-bordershow1;
+			box-shadow:$zdy-bordershow;
 			background: $zdy-bg1;
 			[theme=dark] & {
 			  box-shadow: $zdy-bordershow-dark;
@@ -298,7 +298,7 @@
 .gameslist_conbox,
 .tagslist_conbox{
 	.pagelistcon{
-			  box-shadow: $zdy-bordershow1;
+			  box-shadow: $zdy-bordershow;
 			  background: $zdy-bg1;
 			  [theme=dark] & {
 			    box-shadow: $zdy-bordershow-dark;

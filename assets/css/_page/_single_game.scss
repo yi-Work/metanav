@@ -274,7 +274,7 @@
 				width: 26px;
 			}
 			background: $global-background-color;
-			box-shadow: $zdy-bordershow1;
+			box-shadow: $zdy-bordershow;
 			[theme=dark] & {
 			  background: $global-font-secondary-color-dark;
 			}
@@ -294,7 +294,7 @@
 			margin-bottom: 10px;
 			position: relative;
 			background: $global-background-color;
-			box-shadow: $zdy-bordershow1;
+			box-shadow: $zdy-bordershow;
 			[theme=dark] & {
 			  background: $global-font-secondary-color-dark;
 			}
@@ -325,7 +325,7 @@
 				float: left;
 				padding: 26px 26px 13px;
 				background: $global-background-color;
-				box-shadow: $zdy-bordershow1;
+				box-shadow: $zdy-bordershow;
 				border-radius: 15px;
 				[theme=dark] & {
 				  background: $global-font-secondary-color-dark;
@@ -380,7 +380,7 @@
 				// margin-bottom: 10px;
 				// position: relative;
 				// background: $global-background-color;
-				// box-shadow: 0px 0px 8px 0px $zdy-bordershow1;
+				// box-shadow: 0px 0px 8px 0px $zdy-bordershow;
 				
 			}
 		}
