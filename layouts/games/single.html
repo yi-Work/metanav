@@ -135,7 +135,7 @@
 			{{- end -}}
 			
 			{{- /* Content */ -}}
-			<div class="content" id="content conimages" >
+			<div class="content" id="content" >
 			    {{- /* Outdated Article Reminder */ -}}
 			    {{- partial "single/outdatedArticleReminder.html" . -}}
 			    {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
@@ -422,8 +422,11 @@
 	   },
 	 });
 	 var gallery = new Viewer(document.getElementById('images'));
-	 
-	 var gallery1 = new Viewer(document.getElementById('conimages'));
+	 $(function(){
+		 setTimeout(function(){
+		 	var conimages = new Viewer(document.getElementById('content'));
+		 },1200)
+	 })
 </script>
 {{- end -}}
 

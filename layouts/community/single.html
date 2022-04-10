@@ -4,6 +4,12 @@
 {{- $fontsjs := resources.Get "js/zdycj/fonts.js" -}}
 <script type="text/javascript" src="{{ $jqueryjs.RelPermalink }}"></script>
 <script type="text/javascript" src="{{ $fontsjs.RelPermalink }}"></script>
+
+{{- $viewerjs := resources.Get "js/zdycj/viewer.min.js" -}}
+{{- $viewercss := resources.Get "css/zdycj/viewer.min.css" -}}
+<link rel="stylesheet" href="{{ $viewercss.RelPermalink }}">
+<script type="text/javascript" src="{{ $viewerjs.RelPermalink }}"></script>
+
 <div class="page single alllist_conbox communitysingle_w">
 	<!-- ad -->
 	{{ partial "main/ad" . -}}
@@ -33,7 +39,7 @@
 				{{- end -}} -->
 				{{- with .Site.Params.dateformat | default "2006-01-02" | .PublishDate.Format -}}
 				<div class="time">
-				    <i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>&nbsp;
+				   <!-- <i class="far fa-calendar-alt fa-fw"></i>&nbsp; --><time datetime="{{ . }}">{{ . }}</time>&nbsp;
 				</div>
 				{{- end -}}
 			</div>
@@ -232,8 +238,21 @@
 		{{- end -}}
 	</div>
 </div>
+<div class="viewimagebox">
+  <img id="image" src="picture.jpg" alt="Picture">
+</div>
 <script type="text/javascript">
 	$(".desktop .menu-item").eq(4).addClass("active");
+	// View an image.
+	var viewer = new Viewer(document.getElementById('image'), {
+	  inline: true,
+	  viewed() {
+	    viewer.zoomTo(1);
+	  },
+	});
+	setTimeout(function(){
+		var conimages = new Viewer(document.getElementById('content'));
+	},1200)
 </script>
 {{- end -}}
 

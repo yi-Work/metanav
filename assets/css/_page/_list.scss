@@ -433,6 +433,9 @@
 				[theme=black] & {
 				  color: $global-font-secondary-color-black;
 				}
+				p{
+					margin: 0;
+				}
 			}
 			[theme=auto] & {
 			  .gtypesbox,.gtypesbox a{

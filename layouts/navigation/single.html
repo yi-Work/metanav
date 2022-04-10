@@ -9,6 +9,11 @@
 <script type="text/javascript" src="{{ $fontsjs.RelPermalink }}"></script>
 <script type="text/javascript" src="{{ $swiperjs.RelPermalink}}"></script>
 
+{{- $viewerjs := resources.Get "js/zdycj/viewer.min.js" -}}
+{{- $viewercss := resources.Get "css/zdycj/viewer.min.css" -}}
+<link rel="stylesheet" href="{{ $viewercss.RelPermalink }}">
+<script type="text/javascript" src="{{ $viewerjs.RelPermalink }}"></script>
+
 <div class="page single alllist_conbox navssingle_w">
 	{{ .Scratch.Set "sidebartype" "Navigation" }}
 	<!-- ad -->
@@ -156,6 +161,9 @@
 			
 	</div>
 </div>
+<div class="viewimagebox">
+  <img id="image" src="picture.jpg" alt="Picture">
+</div>
 <script type="text/javascript">
 	$(".desktop .menu-item").eq(2).addClass("active");
 	var swiper = new Swiper(".relevantswiper", {
@@ -169,6 +177,16 @@
 			  prevEl: ".swiper-button-prev",
 			},
 	      });
+	// View an image.
+	var viewer = new Viewer(document.getElementById('image'), {
+	  inline: true,
+	  viewed() {
+	    viewer.zoomTo(1);
+	  },
+	});
+	setTimeout(function(){
+		var conimages = new Viewer(document.getElementById('content'));
+	},1200)
 </script>
 {{- end -}}
 
