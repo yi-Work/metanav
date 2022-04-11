@@ -28,7 +28,7 @@
     {{- if $share.Whatsapp -}}
         <a href="#" onclick="return false;" title="{{ T `shareOn` }} WhatsApp" data-sharer="whatsapp" data-url="{{ .Permalink }}" data-title="{{ .Title }}" data-web>
             <!-- {{- dict "Class" "fab fa-whatsapp fa-fw" | partial "plugin/icon.html" -}} -->
-			{{- dict "Fonts" "#icon-whatsapp" | partial "plugin/zdyicon.html" -}}
+			{{- dict "Fonts" "#icon-icon_whatsapp" | partial "plugin/zdyicon.html" -}}
         </a>
     {{- end -}}
 
@@ -92,7 +92,7 @@
     {{- if $share.Line -}}
         <a href="#" onclick="return false;" title="{{ T `shareOn` }} Line" data-sharer="line" data-url="{{ .Permalink }}" data-title="{{ .Title }}">
             <!-- {{- dict "Simpleicons" "line" "Prefix" (.Scratch.Get "cdn" | default dict).simpleIconsPrefix | partial "plugin/icon.html" -}} -->
-			{{- dict "Fonts" "#icon-line-" | partial "plugin/zdyicon.html" -}}
+			{{- dict "Fonts" "#icon-Line" | partial "plugin/zdyicon.html" -}}
 		</a>
     {{- end -}}
 
@@ -135,7 +135,7 @@
     {{- if $share.Weibo -}}
         <a href="#" onclick="return false;" title="{{ T `shareOn` }} 微博" data-sharer="weibo" data-url="{{ .Permalink }}" data-title="{{ .Title }}"{{ with .Params.featuredImage }} data-image="{{ . }}"{{ end }}{{ with .Site.Params.Social.Weibo }} data-ralateuid="{{ . }}"{{ end }}>
             <!-- {{- dict "Class" "fab fa-weibo fa-fw" | partial "plugin/icon.html" -}} -->
-			{{- dict "Fonts" "#icon-weibo" | partial "plugin/zdyicon.html" -}}
+			{{- dict "Fonts" "#icon-weibo1" | partial "plugin/zdyicon.html" -}}
         </a>
     {{- end -}}
 
