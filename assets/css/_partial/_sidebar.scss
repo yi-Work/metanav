@@ -38,10 +38,23 @@
 		line-height: 33px;
 		cursor: pointer;
 		color: $zdy_color5;
+		[theme=dark] & {
+			color: $global-link-color-dark;
+		}
+		[theme=black] & {
+			color: $global-link-color-dark;
+		}
+		
 	}
 	.tit{
 		font-size: 14px;
 		font-weight: bold;
+		[theme=dark] & {
+			color: $table-background-color;
+		}
+		[theme=black] & {
+			color: $table-background-color;
+		}
 	}
 	.tit:hover{
 		[theme=auto] & {
@@ -108,18 +121,20 @@
 		span:nth-of-type(2){
 			padding: 0 8px;
 			height: 20px;
+			background: $zdy_color9;
+			color: $zdy_color5;
+			[theme=dark] & {
+				background: $zdy-bg-dark;
+			}
+			[theme=black] & {
+				background: $zdy-bg-dark;
+			}
 			
-			[theme=light] & {
-				background: $zdy_color9;
-			}
-			[theme=auto] & {
-				background: $zdy_color9;
-			}
 			border-radius: 5px;
 			line-height: 20px;
 			font-size: 12px;
 			font-weight: 400;
-			color: $zdy_color5;
+			
 		}
 	}
 }

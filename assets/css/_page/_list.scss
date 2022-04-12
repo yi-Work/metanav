@@ -15,8 +15,16 @@
 	.featured-image-preview{
 		@include transition(transform 0.4s ease);
 	}
-	.featured-image-preview:hover{
-		@include transform(scale(1.05));
+	.single:hover{
+		// [theme=light] & {
+		//  box-shadow: $zdy-bordershow-hover;
+		// }
+		// [theme=auto] & {
+		//   box-shadow: $zdy-bordershow-hover;
+		// }
+		.featured-image-preview{
+			@include transform(scale(1.05));
+		}
 	}
 }
 .newslist_conbox,
@@ -96,6 +104,9 @@
 				font-weight: bold;
 				line-height: 28px;
 				margin: 0;
+				a{
+					display: block;
+				}
 				@include box(vertical);
 					-webkit-line-clamp: 2;
 				}
@@ -397,6 +408,9 @@
 			[theme=light] & {
 				border-bottom: 1px solid $gangbg;
 			}
+			svg{
+				font-size: 21px;
+			}
 		}
 	}
 	.smliconbox{
@@ -470,7 +484,7 @@
 				
 			}
 			.content{
-				padding-top: 6px;
+				margin-bottom: 6px;
 				font-size: 13px;
 				font-weight: 400;
 				color: $zdy_color2;
@@ -522,7 +536,8 @@
 		border-bottom-color:rgba(0,0,0,0) ;
 	}
 }
-.gameslist_conbox{
+.gameslist_conbox,
+.gamesingle_w{
 	.sidebarbox_mb .tit{
 		[theme=auto] & {
 			color: $global-font-color;

@@ -117,7 +117,13 @@
 			padding: 0;
 			margin: 0;
 			.active{
-				color:$zdy_color4
+				color:$zdy_color4;
+				[theme=dark] & {
+					color:$zdy_color5;
+				}
+				[theme=black] & {
+					color:$zdy_color5;
+				}
 			}
 		}
 	}
@@ -128,7 +134,12 @@
 		white-space:nowrap;
 		a.editbtn{
 			color: $zdy_color5;
-			
+			[theme=dark] & {
+				color: $zdy_color4;
+			}
+			[theme=black] & {
+				color: $zdy_color4;
+			}
 		}
 		.doks-sidebar-toggle {
 			cursor: pointer;

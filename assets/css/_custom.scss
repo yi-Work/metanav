@@ -199,3 +199,58 @@
 		-webkit-transform: scale(0.9);
 	}
 }
+.zdy_pageleftad2_l{
+	.adico{
+		right: auto;
+		left: 5px;
+	}
+	
+	.closegg{
+		right: auto;
+		left: 35px;
+	}
+}
+
+.gt-container .gt-header-textarea{
+	[theme=dark] & {
+		background-color:$zdy-bg-dark;
+		// color: $global-link-color-dark;
+	}
+	[theme=black] & {
+		background-color:$zdy-bg-dark;
+		// color: $global-link-color-dark;
+	}
+}
+.gt-container .gt-header-textarea:hover {
+  [theme=dark] & {
+  	background-color:$zdy-bg-dark
+  }
+  [theme=black] & {
+  	background-color:$zdy-bg-dark
+  }
+}
+.gt-container {
+	 [theme=dark] & {
+	 	@include placeholder($global-link-color-dark)
+	 }
+	 [theme=black] & {
+	 	@include placeholder($global-link-color-dark)
+	 }
+}
+.gt-container .gt-user-inner{
+	[theme=dark] & {
+		color: $global-link-color-dark;
+	}
+	[theme=black] & {
+		color: $global-link-color-dark;
+	}
+}
+.gt-container .gt-btn-preview{
+	[theme=dark] & {
+		background-color: rgba(0,0,0,0);
+	}
+	[theme=black] & {
+		background-color: rgba(0,0,0,0);
+	}
+	
+}

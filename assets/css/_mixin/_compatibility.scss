@@ -66,6 +66,25 @@
   input::placeholder {
     color: $color;
   }
+  textarea::-webkit-input-placeholder{
+    color: $color;
+  }
+  
+  textarea:-moz-placeholder{
+    color: $color;
+  }
+  
+  textarea::-moz-placeholder{
+    color: $color;
+  }
+  
+  textarea:-ms-input-placeholder{
+    color: $color;
+  }
+  
+  textarea::placeholder {
+    color: $color;
+  }
 }
 
 @mixin max-content($property) {

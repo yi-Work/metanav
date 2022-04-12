@@ -32,8 +32,12 @@
 			font-size: 12px;
 		}
 		.gtypesbox a{
-			font-size: 13px;
-			color: $zdy_color1;
+			font-size: 12px;
+			color: $zdy_color6;
+			
+		}
+		.gtypesbox a:hover{
+			color: $single-link-color;
 		}
 		.indexgamesli{
 			float: left;
