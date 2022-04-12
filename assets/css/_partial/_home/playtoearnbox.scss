@@ -137,6 +137,7 @@
 				height: 36px;
 				@include box(vertical);
 				-webkit-line-clamp: 2;
+				p{margin: 0;}
 				[theme=dark] & {
 				  color: $global-font-secondary-color-dark;
 				}
