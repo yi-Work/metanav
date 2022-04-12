@@ -49,12 +49,12 @@
 	.tit{
 		font-size: 14px;
 		font-weight: bold;
-		[theme=dark] & {
-			color: $table-background-color;
-		}
-		[theme=black] & {
-			color: $table-background-color;
-		}
+		// [theme=dark] & {
+		// 	color: $table-background-color;
+		// }
+		// [theme=black] & {
+		// 	color: $table-background-color;
+		// }
 	}
 	.tit:hover{
 		[theme=auto] & {

@@ -59,106 +59,9 @@
 					<!-- <a target="_blank" class="linkbtn" href="{{ $params.link }}">{{ T `navtext2`}}</a> -->
 				</div>
 			</div>
-			<div class="gamesmsgbox1">
-				<table border="0" cellspacing="0" cellpadding="0">
-					<thead>
-						<tr>
-							<th class="tittext">Nft-Support</th>
-							<th class="tittext">Play to Earn</th>
-							<th class="tittext">Free-to-Play</th>
-							<th class="tittext">Blockchain</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="smcon">
-								{{- if $params.nft_support -}}
-								<span class="green">Yes</span>
-								{{- else -}}
-								<span class="red">NO</span>
-								{{- end -}}
-							</td>
-							<td class="smcon">
-								{{- range $key, $value :=$params.play_to_earn -}}
-								<span class="green">{{$value}}</span>
-								{{- else -}}
-								-
-								{{- end -}}
-							</td>
-							<td class="smcon">
-								{{- if $params.free_to_play -}}
-								<span class="green">Yes</span>
-								{{- else -}}
-								<span class="red">NO</span>
-								{{- end -}}
-							</td>
-							<td class="smcon">
-								{{- range $key, $value :=$params.blockchain -}}
-								<span class="green">{{$value}}</span>
-								{{- else -}}
-								-
-								{{- end -}}
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			
-			{{- /* Series list */ -}}
-			{{- if $params.series | and $params.seriesNavigation -}}
-			        {{- range $key, $value := .Site.Taxonomies.series -}}
-			            {{- range $params.series -}}
-			                {{- if . | urlize | eq ($key | urlize) -}}
-			                    {{- $term := $.Site.GetPage "series" $key -}}
-			                    <div class="details series-nav open">
-			                        <div class="details-summary series-title">
-			                            <span>{{ T "series" }} - {{ $term.Title }}</span>
-			                            <span><i class="details-icon fas fa-angle-right"></i></span>
-			                        </div>
-			                        <div class="details-content series-content">
-			                            <nav>
-			                                <ul>
-			                                    {{- range $value.Pages -}}
-			                                        {{- if .LinkTitle | eq $.Title -}}
-			                                            <li><span class="active">{{ .LinkTitle }}</span></li>
-			                                        {{- else }}
-			                                            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-			                                        {{- end }}
-			                                    {{- end -}}
-			                                </ul>
-			                            </nav>
-			                        </div>
-			                    </div>
-			                {{- end -}}
-			            {{- end -}}
-			        {{- end -}}
-			{{- end -}}
-			
-			{{- /* Content */ -}}
-			<div class="content" id="content" >
-			    {{- /* Outdated Article Reminder */ -}}
-			    {{- partial "single/outdatedArticleReminder.html" . -}}
-			    {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
-			</div>
-			{{/* Sponsor */}}
-			{{- partial "single/sponsor.html" . -}}
-			   
-			   
-			{{- /* Footer */ -}}
-			
-			{{- partial "single/footer.html" . -}}
-			{{- .Scratch.Set "comment" $params.comment -}}
-			{{- if eq .Params.comment true -}}
-			    {{- .Scratch.Set "comment" .Site.Params.comment -}}
-			{{- else if eq .Params.comment false -}}
-			    {{- .Scratch.Set "comment" dict -}}
-			{{- end -}}
 			<!-- Social Contact  -->
 			<div class="socialcontactbox">
-				<p class="botmtit">
-					<span><svg class="icon" aria-hidden="true">
-						<use xlink:href="#icon-tupian"></use>
-					</svg></span>
+				<p class="tit">
 					{{- T `socialcontact` -}}
 				</p>
 				
@@ -270,6 +173,101 @@
 					{{- end -}}
 				</div>
 			</div>
+			<div class="gamesmsgbox1">
+				<table border="0" cellspacing="0" cellpadding="0">
+					<thead>
+						<tr>
+							<th class="tittext">Nft-Support</th>
+							<th class="tittext">Play to Earn</th>
+							<th class="tittext">Free-to-Play</th>
+							<th class="tittext">Blockchain</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="smcon">
+								{{- if $params.nft_support -}}
+								<span class="green">Yes</span>
+								{{- else -}}
+								<span class="red">NO</span>
+								{{- end -}}
+							</td>
+							<td class="smcon">
+								{{- range $key, $value :=$params.play_to_earn -}}
+								<span class="green">{{$value}}</span>
+								{{- else -}}
+								-
+								{{- end -}}
+							</td>
+							<td class="smcon">
+								{{- if $params.free_to_play -}}
+								<span class="green">Yes</span>
+								{{- else -}}
+								<span class="red">NO</span>
+								{{- end -}}
+							</td>
+							<td class="smcon">
+								{{- range $key, $value :=$params.blockchain -}}
+								<span class="green">{{$value}}</span>
+								{{- else -}}
+								-
+								{{- end -}}
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			{{- /* Series list */ -}}
+			{{- if $params.series | and $params.seriesNavigation -}}
+			        {{- range $key, $value := .Site.Taxonomies.series -}}
+			            {{- range $params.series -}}
+			                {{- if . | urlize | eq ($key | urlize) -}}
+			                    {{- $term := $.Site.GetPage "series" $key -}}
+			                    <div class="details series-nav open">
+			                        <div class="details-summary series-title">
+			                            <span>{{ T "series" }} - {{ $term.Title }}</span>
+			                            <span><i class="details-icon fas fa-angle-right"></i></span>
+			                        </div>
+			                        <div class="details-content series-content">
+			                            <nav>
+			                                <ul>
+			                                    {{- range $value.Pages -}}
+			                                        {{- if .LinkTitle | eq $.Title -}}
+			                                            <li><span class="active">{{ .LinkTitle }}</span></li>
+			                                        {{- else }}
+			                                            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+			                                        {{- end }}
+			                                    {{- end -}}
+			                                </ul>
+			                            </nav>
+			                        </div>
+			                    </div>
+			                {{- end -}}
+			            {{- end -}}
+			        {{- end -}}
+			{{- end -}}
+			
+			{{- /* Content */ -}}
+			<div class="content" id="content" >
+			    {{- /* Outdated Article Reminder */ -}}
+			    {{- partial "single/outdatedArticleReminder.html" . -}}
+			    {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+			</div>
+			{{/* Sponsor */}}
+			{{- partial "single/sponsor.html" . -}}
+			   
+			   
+			{{- /* Footer */ -}}
+			
+			{{- partial "single/footer.html" . -}}
+			{{- .Scratch.Set "comment" $params.comment -}}
+			{{- if eq .Params.comment true -}}
+			    {{- .Scratch.Set "comment" .Site.Params.comment -}}
+			{{- else if eq .Params.comment false -}}
+			    {{- .Scratch.Set "comment" dict -}}
+			{{- end -}}
+			
 			<!-- Game Screen  -->
 			<div class="gamescreenbox">
 				<p class="botmtit">
@@ -411,6 +409,9 @@
 	 if($(".socialcontactbox .zcon a").length<1){
 		 $(".socialcontactbox").hide()
 	 }
+	if($(".supportedntfsbox li").length<1){
+		$(".supportedntfsbox").hide()
+	} 
 	 if($(".gamescreenbox .zcon a").length<1){
 	 		 $(".gamescreenbox").hide()
 	 }

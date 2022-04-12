@@ -278,12 +278,14 @@
  	window.onclick = function(){
  		headbox2w.classList.remove("headbox2wac");
  	}
-	// var currentTheme = document.body.getAttribute('theme')
-	// var img1 = document.getElementsByClassName("logo1")[0];
-	// var img2 = document.getElementsByClassName("logo2")[0];
-	// if (currentTheme === 'dark'||currentTheme === 'black') {
-	//   img1.style.display = 'none'
-	// }else {
-	//   img2.style.display = 'none'
-	// }
+	var currentTheme = document.body.getAttribute('theme')
+	var img1 = document.getElementsByClassName("logo1")[0];
+	var img2 = document.getElementsByClassName("logo2")[0];
+	if (currentTheme === 'dark'||currentTheme === 'black') {
+	 img1.style.display = 'none'
+	 img2.style.display = ''
+	}else {
+	  img2.style.display = 'none'
+	  img1.style.display = ''
+	}
  </script>
