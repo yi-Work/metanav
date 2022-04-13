@@ -299,10 +299,12 @@
 				background: $zdy_color9;
 				font-size: 20px;
 				[theme=dark] & {
-					color: #a4a5a8;
+					color: $global-font-color-dark;
+					background: $zdy-bg-dark;
 				}
 				[theme=black] & {
-					color: #a4a5a8;
+					color: $global-font-color-dark;
+					background: $zdy-bg-dark;
 				}
 				border-radius: $border-radius-size5;
 				margin-right: 5px;
