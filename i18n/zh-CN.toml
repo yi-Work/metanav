@@ -257,6 +257,11 @@ other = "Famland元宇宙"
 other = "社会分数"
 
 
-#标签翻译
+#分类翻译
 [adventure]
 other = "无情翻译"
+[DeFi-Games]
+other = "无情翻译"
+[Metaverse-News]
+other = "无情翻译"
+
