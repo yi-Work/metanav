@@ -3,7 +3,11 @@
 		{{ $.Scratch.Set "games" .Site.Taxonomies.games.ByCount}}
 		 <div class="gamesbox">
 		 {{ range $key, $value := $.Scratch.Get "games" }}
+			{{ if T $value.Name }}
+			  <a href="{{ printf "%s/%s" "games" $value.Name | urlize | relLangURL }}/">{{ T $value.Name }}</a>
+			{{ else }}
 			  <a href="{{ printf "%s/%s" "games" $value.Name | urlize | relLangURL }}/">{{ $value.Name }}</a>
+			{{ end }}
 		 {{ end }}
 		 </div>
 	</section>
