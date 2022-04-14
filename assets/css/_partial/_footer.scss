@@ -1,3 +1,18 @@
+footer {
+	border-top: 1px solid $gangbg;
+	padding: 32px 0 75px;
+	// width: 100%;
+	
+	width: 1290px;
+	margin: 0 auto;
+	.text1{
+		text-align: center;
+		font-size: 14px;
+		font-weight: 400;
+		color: $zdy_color13;
+		line-height: 22px;
+	}
+}
 // footer {
 //   // height: 2rem;
 // 	width: 100%;

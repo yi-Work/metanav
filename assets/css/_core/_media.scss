@@ -16,6 +16,10 @@ width: 1290px;
   .home .index_subscribebox .container{
 	  padding: 0 2rem;
   }
+  footer{
+	  width:auto;
+	  margin: 0 2rem;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -29,6 +33,10 @@ width: 1290px;
 		  box-sizing: border-box;
 		  -webkit-box-sizing: border-box;
 		  padding: 0 1rem;
+	}
+	footer{
+		  width:auto;
+		  margin: 0 1rem;
 	}
 	#homenavigation .box3 li{
 		width: 10%;
