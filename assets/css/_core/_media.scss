@@ -467,8 +467,11 @@ width: 1290px;
 		width: 10px;
 		margin-right:5px;
 	}
+	.bigshowb .swiper-pagination-bullet::after{
+		margin-top: 8px;
+	}
 	.slideboxw .bigshowb .swiper-pagination{
-		bottom: 5px;
+		bottom: 2px;
 		padding: 0 15px;
 	}
 	.slideboxw .bigshowb .swiper-slide .conbox{
