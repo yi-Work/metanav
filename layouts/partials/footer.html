@@ -2,7 +2,7 @@
      <footer class="footer">
          <div class="footer-container">
  			<p class="text1">© 2022 PlayToEarn. All Rights Reserved. </p>
-             <!-- {{- /* Custom Content */ -}}
+             {{- /* Custom Content */ -}}
              {{- with .Site.Params.footer.custom -}}
                  <div class="footer-line">
                      {{- safeHTML . -}}
@@ -25,11 +25,11 @@
                  {{- $e := dict "Theme" $theme | T "theme" -}}
                  {{- $post_info = $post_info | append $e -}}
              {{- end -}}
-             {{- with $post_info -}}
+             <!-- {{- with $post_info -}}
                  <div class="footer-line">
                      {{ delimit . "&nbsp;|&nbsp;" | safeHTML }}
                  </div>
-             {{- end -}}
+             {{- end -}} -->
              <div class="footer-line">
                  {{- /* Copyright year */ -}}
                  {{- if ne .Site.Params.footer.copyright false -}}
@@ -76,7 +76,7 @@
                  {{- end -}}
              </div>
              <div class="footer-line">
-             </div> -->
+             </div>
          </div>
          {{- /* PWA */ -}}
          {{- if eq .Site.Params.enablePWA true -}}
