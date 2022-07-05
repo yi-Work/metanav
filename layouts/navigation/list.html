@@ -47,14 +47,14 @@
 						{{- $navigation := .Site.Params.list.navigation -}}
 						{{ $.Scratch.Set "thisnav" .Params.navigation }}
 						{{ range $key, $value := $.Scratch.Get "thisnav" }}
-							{{ if eq $key 0}}
+							<!-- {{ if eq $key 0}} -->
 							{{ $.Scratch.Set "gg" (printf "%s/%s" "navigation" $value | urlize | relLangURL)  }}
-							{{ end }}
+							<!-- {{ end }} -->
 							<div class="smcontit"><!-- <span>
 								<svg class="icon" aria-hidden="true">
 									<use xlink:href="#icon-wenzhang"></use>
-								</svg>
-							</span> -->{{$value}}<a class="morebtn" href="{{ $.Scratch.Get "gg"}}">{{ T `more`}} ></a></div>
+								</svg>{{ $.Scratch.Get "gg"}}
+							</span> -->{{$value}} <a class="morebtn" href="{{printf "%s/%s" "navigation" $value | urlize | relLangURL}}">{{ T `more`}} ></a></div>
 							<div class="conulbox">
 								{{- $opages := where $opages "Params.navigation" "intersect"  (slice $value) -}}
 								{{- $opages := where $opages "Params.hidePage" "!=" true -}}
