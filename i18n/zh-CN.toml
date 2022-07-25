@@ -267,3 +267,48 @@ other = "无情翻译"
 [Metaverse-News]
 other = "无情翻译"
 
+[allnfts]
+other = "所有NFT"
+
+
+[art]
+other = "数字艺术品"
+[collectibles]
+other = "数字收藏品"
+[domain-names]
+other = "域名"
+[music]
+other = "音乐"
+[photography]
+other = "摄影"
+[sports]
+other = "体育"
+[trading-cards]
+other = "卡牌"
+[utility]
+other = "效率"
+[virtual-worlds]
+other = "虚拟世界"
+
+[Art]
+other = "数字艺术品"
+[Collectibles]
+other = "数字收藏品"
+[Domain-Names]
+other = "域名"
+[Music]
+other = "音乐"
+[Photography]
+other = "摄影"
+[Sports]
+other = "体育"
+[Trading-Cards]
+other = "卡牌"
+[Utility]
+other = "效率"
+[Virtual-Worlds]
+other = "虚拟世界"
+[Nfts]
+other = "NFT频道"
+[nfts]
+other = "NFT频道"

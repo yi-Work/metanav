@@ -49,6 +49,9 @@ hasCJKLanguage = true
 		[zh-cn.params.home.games]
 			# 主页显示文章数量
 			paginate = 10
+		[zh-cn.params.home.nfts]
+			# 主页显示文章数量
+			paginate = 10
 		[zh-cn.params.home.navigation]
 			# 主页显示文章数量
 			paginate = 20
@@ -58,6 +61,8 @@ hasCJKLanguage = true
 			# 二类列表页数量
 			paginate1 = 40
 		[zh-cn.params.list.games]
+			paginate = 12
+		[zh-cn.params.list.nfts]
 			paginate = 12
 		[zh-cn.params.list.community]
 			paginate = 12
@@ -115,6 +120,9 @@ hasCJKLanguage = true
 		[en.params.home.games]
 			# 主页显示文章数量
 			paginate = 10
+		[en.params.home.nfts]
+			# 主页显示文章数量
+			paginate = 10
 		[en.params.home.navigation]
 			# 主页显示文章数量
 			paginate = 20
@@ -124,6 +132,8 @@ hasCJKLanguage = true
 			# 二类列表页数量
 			paginate1 = 40
 		[en.params.list.games]
+			paginate = 12
+		[en.params.list.nfts]
 			paginate = 12
 		[en.params.list.community]
 			paginate = 12

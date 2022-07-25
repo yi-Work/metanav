@@ -255,3 +255,8 @@ other = "metaverse"
 
 [socialscore]
 other = "Social Score"
+
+[allnfts]
+other = "All nft"
+[nfts]
+other = "NFT"

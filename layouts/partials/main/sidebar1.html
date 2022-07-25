@@ -17,6 +17,22 @@
 			{{ end }}
 		</li>
 	{{- end -}}
+	{{- if eq $sidebartype "Nfts" -}}
+		<li>
+			<p class="tit">{{ T `browse`}}</p>
+			<a type="all" href="{{ "nfts/" | relLangURL}}"><span>{{T `allnfts`}}</span><span>{{$.Site.Taxonomies.categories.nfts.Count}}</span></a>
+		</li>
+		<li>
+			<p class="tit">{{ T `types`}}</p>
+			{{ range $taxonomyname, $taxonomy := .Site.Taxonomies.nfts }}
+				{{ if T (replace $taxonomyname " " "-") }}
+				  <a type="{{ $taxonomyname }}" href="{{ "nfts/" | relLangURL}}{{ $taxonomyname | urlize }}"><span>{{ T (replace $taxonomyname " " "-") }}</span><span>{{ sub .Count 1 }}</span></a>
+				{{ else }}
+				  <a type="{{ $taxonomyname }}" href="{{ "nfts/" | relLangURL}}{{ $taxonomyname | urlize }}"><span>{{ humanize $taxonomyname }}</span><span>{{ sub .Count 1 }}</span></a>
+				{{ end }}
+			{{ end }}
+		</li>
+	{{- end -}}
 	{{- if eq $sidebartype "Tags" -}}
 		<li>
 			<p class="tit">{{ T `browse`}}</p>
@@ -41,7 +57,7 @@
 	})
 	if(thistype != thistitle){
 		$(".sidebarbox_mb a").each(function(){
-			if($(this).attr("type").toLowerCase()==thistitle.toLowerCase()){
+			if($(this).attr("type").toLowerCase()==thistitle.toLowerCase()||$(this).attr("type").toLowerCase()==thistitle.toLowerCase().replace(" ","-")){
 				$(this).addClass("active")
 				thistitle = "000"
 			}

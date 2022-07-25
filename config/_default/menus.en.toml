@@ -38,6 +38,14 @@
   url = "/community/activities/a/"
   title = ""
   weight = 5
+[[main]]
+  identifier = "NFT"
+  pre = ""
+  post = ""
+  name = "NFT"
+  url = "/nfts/"
+  title = ""
+  weight = 6
   
 [[community]]
   name = "Activities"

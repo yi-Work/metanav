@@ -38,7 +38,14 @@
   url = "/community/activities/a/"
   title = ""
   weight = 5
-
+[[main]]
+  identifier = "NFT"
+  pre = ""
+  post = ""
+  name = "NFT频道"
+  url = "/nfts/"
+  title = ""
+  weight = 6
 [[community]]
   name = "最新活动"
   weight = 1

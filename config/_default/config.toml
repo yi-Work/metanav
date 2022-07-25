@@ -627,6 +627,8 @@ relativeUrls = true
 	games = "games"
 	#导航分类-标签都必须是导航分类相关
 	navigation = "navigation"
+	#nft分类-标签都必须是nft分类相关
+	nfts = "nfts"
 	#社区分类-标签都必须是社区分类相关
 	community = "community"
 	#广告
