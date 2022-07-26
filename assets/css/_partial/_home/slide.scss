@@ -88,9 +88,13 @@
 	}
 	.bigshowb .swiper-slide .title {
 		font-size: 30px;
+		line-height: 35px;
 		font-weight: 800;
 		color: #FFFFFF;
 		margin: 20px 0;
+		@include box(vertical);
+		overflow: hidden;
+		-webkit-line-clamp: 2;
 	}
 	.bigshowb .swiper-slide .subtitle {
 		font-size: 14px;

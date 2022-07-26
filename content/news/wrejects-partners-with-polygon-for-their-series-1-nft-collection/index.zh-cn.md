@@ -1,5 +1,5 @@
 ---
-title: "Wrejects 与 Polygon 合作推出其系列 1 NFT 收藏"
+title: "Wrejects 与 Polygon 合作推出其系列 1 NFT 收藏Wrejects 与 Polygon 合作推出其系列 1 NFT 收藏Wrejects 与 Polygon 合作推出其系列 1 NFT 收藏"
 date: 2022-03-24T21:57:40+08:00
 lastmod: 2022-03-24T16:45:40+08:00
 draft: false

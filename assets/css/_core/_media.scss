@@ -450,8 +450,10 @@ width: 1290px;
 }
 @media only screen and (max-width: 600px) {
 	.slideboxw .bigshowb .swiper-slide .title{
-		margin:10px 0 5px;
+		margin:5px 0 5px;
 		font-size: 1rem;
+		-webkit-line-clamp: 1;
+		line-height: 1rem;
 	}
 	
 	.slideboxw .bigshowb .swiper-slide .subtitle{
