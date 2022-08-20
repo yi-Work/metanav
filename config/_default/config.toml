@@ -483,10 +483,10 @@ relativeUrls = true
 
   #  网站分析配置
   [params.analytics]
-    enable = false
+    enable = true
     # Google Analytics
     [params.analytics.google]
-      id = ""
+      id = "G-Y6XCMNGZTV"
       # 是否匿名化用户 IP
       anonymizeIP = true
     # Fathom Analytics
@@ -634,7 +634,4 @@ relativeUrls = true
 	#广告
 	adtype = "adtype"
 	adshow = "adshow"
-
-
-
 
